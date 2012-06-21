@@ -1,0 +1,933 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2012-04-16 15:01+0200\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Aruba/AppWsResult.php:99
+msgid "[Web Service Error] "
+msgstr "[Web Service Error]"
+
+#: Controller/CloudServersController.php:43;400
+msgid "Invalid Cloud Server"
+msgstr "Cloud Server non valido"
+
+#: Controller/CloudServersController.php:64
+msgid "The Cloud Server has been removed"
+msgstr "Il Cloud Server e' stato rimosso"
+
+#: Controller/CloudServersController.php:67
+msgid "The Cloud Server could not be removed. Please, try again."
+msgstr "Il Cloud Serve non puo' essere rimosso. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:86
+msgid "The Start command has been sent"
+msgstr "Il comando di Start e' stato inviato"
+
+#: Controller/CloudServersController.php:89
+msgid "The Start command could not be sent. Please, try again."
+msgstr "Il comando di Start non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:109
+msgid "The Stop command has been sent"
+msgstr "Il comandio di Stop e' stato inviato"
+
+#: Controller/CloudServersController.php:112
+msgid "The Stop command could not be sent. Please, try again."
+msgstr "Il comando di Stop non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:133
+msgid "The PowerOff command has been sent"
+msgstr "Il comando di Spegnimento e' stato inviato"
+
+#: Controller/CloudServersController.php:137
+msgid "The PowerOff command could not be sent. Please, try again."
+msgstr "Il comando di Spegnimento non puo' errere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:158
+msgid "The Reset command has been sent"
+msgstr "Il comando di Reset e' stato inviato"
+
+#: Controller/CloudServersController.php:161
+msgid "The Reset command could not be sent. Please, try again."
+msgstr "Il comando di Rest non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:181
+msgid "The Archive command has been sent"
+msgstr "Il comando di Archiviazione e' stato inviato"
+
+#: Controller/CloudServersController.php:185
+msgid "The Archive command could not be sent. Please, try again."
+msgstr "Il comando di Archiviazione non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:206
+msgid "The Restore command has been sent"
+msgstr "Il comando di Ripristino e' stato inviato"
+
+#: Controller/CloudServersController.php:210
+msgid "The Restore command could not be sent. Please, try again."
+msgstr "Il comando di Ripristino non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:229
+#: Controller/NewCloudServersController.php:228
+msgid "The Connect Virtual Switch command has been sent"
+msgstr "Il comando di Connetti Virtual Switch e' stato inviato"
+
+#: Controller/CloudServersController.php:233
+#: Controller/NewCloudServersController.php:231
+msgid "The Connect Virtual Switch command could not be sent. Please, try again."
+msgstr "Il comando di Connetti Virtual Switch non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:258
+msgid "The Connect IPs command has been sent"
+msgstr "Il comando di Connetti IP e' stato inviato"
+
+#: Controller/CloudServersController.php:261
+msgid "The Connect IPs command could not be sent. Please, try again."
+msgstr "Il comando di Connetti IP non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:268;305
+msgid "Select at least one Public IP"
+msgstr "Selezionare almeno un IP"
+
+#: Controller/CloudServersController.php:295
+msgid "The Disconnect IPs command has been sent"
+msgstr "Il comando di Disconnetti IP e' stato inviato"
+
+#: Controller/CloudServersController.php:298
+msgid "The Disconnect IPs command could not be sent. Please, try again."
+msgstr "Il comando di Disconnetti IP non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:326
+#: Controller/NewCloudServersController.php:253
+msgid "The Disconnect Virtual Switch command has been sent"
+msgstr "Il comando di Disconnetti Virtual Switch e' stato inviato"
+
+#: Controller/CloudServersController.php:329
+#: Controller/NewCloudServersController.php:256
+msgid "The Disconnect Virtual Switch command could not be sent. Please, try again."
+msgstr "Il comando di Disconnetti Virtual Switch non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:344
+msgid "The Remove Disk command has been sent"
+msgstr "Il comando di Rimuovi Disco e' stato inviato"
+
+#: Controller/CloudServersController.php:348
+msgid "The Remove Disk command could not be sent. Please, try again."
+msgstr "Il comando di Rimuovi Disco non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:371
+msgid "The Create Disk command has been sent"
+msgstr "Il comando di Crea Disco e' stato inviato"
+
+#: Controller/CloudServersController.php:372
+msgid "The Create Disk command could not be sent. Please, try again."
+msgstr "Il comando di Crea Disco non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:376
+msgid "The Resize Disk command has been sent"
+msgstr "Il comando di Ridimensiona Disco e' stato inviato"
+
+#: Controller/CloudServersController.php:377
+msgid "The Resize Disk command could not be sent. Please, try again."
+msgstr "Il comando di Ridimensiona Disco non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:415
+msgid "The Cloud Server has been renamed"
+msgstr "Il Cloud Server e' stato rinominato"
+
+#: Controller/CloudServersController.php:418
+msgid "The Cloud Server could not be renamed. Please, try again."
+msgstr "Il Cloud Server non puo' essere rinominato"
+
+#: Controller/CloudServersController.php:444
+msgid "The Modify CPUs command has been sent"
+msgstr "Il comando di Modifica CPU e' stato inviato"
+
+#: Controller/CloudServersController.php:447
+msgid "The Modify CPUs command could not be sent. Please, try again."
+msgstr "Il comando di Modifica CPU non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/CloudServersController.php:471
+msgid "The Modify RAMs command has been sent"
+msgstr "Il comando di Modifica RAM e' stato inviato"
+
+#: Controller/CloudServersController.php:474
+msgid "The Modify RAMs command could not be sent. Please, try again."
+msgstr "Il comando di Modifica RAM non puo' essere inviato. Riprovare in seguito"
+
+#: Controller/DashboardsController.php:41
+msgid "Error"
+msgstr "Errore"
+
+#: Controller/LoginsController.php:112
+msgid "Datacenter not enabled"
+msgstr "Datacenter non abilitato"
+
+#: Controller/LoginsController.php:117;122;129
+msgid "Login failed"
+msgstr "Accesso fallito"
+
+#: Controller/NewCloudServersController.php:84
+msgid "There are some validation problem. Please, check your ethernet fields"
+msgstr "Ci sono alcuni problemi di validazione. Controllare i valori dei campi Ethernets"
+
+#: Controller/PublicIpsController.php:43
+msgid "The ip address [%s] has been saved"
+msgstr "L'indirizzo IP [%s] e' stato aggiunto"
+
+#: Controller/PublicIpsController.php:46
+msgid "The ip address could not be saved. Please, try again."
+msgstr "L'indirizzo IP non puo' essere inserito. Riprovare in seguito"
+
+#: Controller/PublicIpsController.php:68
+msgid "The ip address has been removed"
+msgstr "L'indirizzo IP e' stato rimosso"
+
+#: Controller/PublicIpsController.php:71
+msgid "The ip address could not be removed. Please, try again."
+msgstr "L'indirizzo IP non puo' essere rimosso. Riprovare in seguito"
+
+#: Controller/VirtualSwitchesController.php:46
+msgid "The Virtual Switch has been saved"
+msgstr "Il Virtual Switch e' stato inserito"
+
+#: Controller/VirtualSwitchesController.php:49
+msgid "The Virtual Switch could not be saved. Please, try again."
+msgstr "il Virtual Switch non puo' essere inserito. Riprovare in seguito"
+
+#: Controller/VirtualSwitchesController.php:78
+msgid "The Virtual Switch has been removed"
+msgstr "Il Virtual Switch e' stato rimosso"
+
+#: Controller/VirtualSwitchesController.php:81
+msgid "The Virtual Switch could not be removed. Please, try again."
+msgstr "Il Virtual Switch non puo' essere rimosso. Riprovare in seguito"
+
+#: Model/CloudServer.php:187
+#: Model/NewCloudServer.php:235
+#: Model/VirtualSwitch.php:48
+msgid "The Name must not be empty"
+msgstr "Il campo Nome non puo' essere vuoto"
+
+#: Model/CloudServer.php:195
+#: Model/NewCloudServer.php:243
+#: Model/VirtualSwitch.php:56
+msgid "The Name must contains only [a-z,A-Z,0-9,-]"
+msgstr "Il campo nome deve contenere soltanto i seguenti caratteri [a-z,A-Z,0-9,-]"
+
+#: Model/CloudServer.php:210
+msgid "The CPUs must not be empty"
+msgstr "Il campo CPU non deve essere vuoto"
+
+#: Model/CloudServer.php:218
+msgid "The CPUs must be numeric"
+msgstr "Il campo CPU deve essere numerico"
+
+#: Model/CloudServer.php:224
+msgid "The CPUs must be between %s and %s"
+msgstr "Il campo CPU deve essere compreso tra %s ed %s"
+
+#: Model/CloudServer.php:239
+msgid "The RAMs must not be empty"
+msgstr "Il campo RAM non deve essere vuoto"
+
+#: Model/CloudServer.php:247
+msgid "The RAMs must be numeric"
+msgstr "Il campo RAM deve essere numerico"
+
+#: Model/CloudServer.php:253
+msgid "The RAMs must be between %s and %s"
+msgstr "Il campo RAM deve essere compreso tra %s ed %s"
+
+#: Model/CloudServer.php:270
+#: Model/NewCloudServer.php:301
+msgid "The HD%s Size must not be empty"
+msgstr "La dimensione di HD%s non deve essere vuota"
+
+#: Model/CloudServer.php:278
+#: Model/NewCloudServer.php:309
+msgid "The HD%s Size must be numeric"
+msgstr "La dimensione di HD%s deve essere numerica"
+
+#: Model/CloudServer.php:283
+#: Model/NewCloudServer.php:314
+msgid "The HD%s Size must be between %sGB and %sGB"
+msgstr "La dimensione di HD%s deve essere compresa tra %sGB e %sGB"
+
+#: Model/CloudServer.php:288
+#: Model/NewCloudServer.php:319
+msgid "The HD%s Size must be a multiple of %sGB"
+msgstr "La dimensione di HD%s deve essere un multiplo di %sGB"
+
+#: Model/NewCloudServer.php:257
+msgid "The Password must not be empty"
+msgstr "Il campo Password non deve essere vuoto"
+
+#: Model/NewCloudServer.php:265
+msgid "The Password must contains only [a-z,A-Z,0-9] from 7 to 20 chars"
+msgstr "Il campo Password deve contenere soltanto [a-z,A-Z,0-9] con lunghezza da 7 a 20"
+
+#: Model/NewCloudServer.php:269
+msgid "The Password must contains at least one upper-case char"
+msgstr "Il campo Password deve contenere almeno un carattere maiuscolo"
+
+#: Model/NewCloudServer.php:272
+msgid "The PasswordChk must not be empty"
+msgstr "Il campo Password Check non deve essere vuoto"
+
+#: Model/NewCloudServer.php:280
+msgid "Password and Password check do not match"
+msgstr "I campi Password non coincidono."
+
+#: Model/NewCloudServer.php:336
+msgid "The IP address of ETHERNET 0%s must not be empty"
+msgstr "L'indirizzo IP della ETHERNET 0%s non deve essere vuoto"
+
+#: Model/NewCloudServer.php:344
+msgid "Please supply a valid IP Address for ETHERNET 0%s"
+msgstr "Inserire un indirizzo IP valido per la ETHERNET 0%s"
+
+#: Model/NewCloudServer.php:350
+msgid "The Netmask of ETHERNET 0%s must not be empty"
+msgstr "La Netmask della ETHERNET 0%s non deve essere vuota"
+
+#: Model/NewCloudServer.php:358
+msgid "Please supply a valid Netmask for ETHERNET 0%s"
+msgstr "Inserire una Netmask valida per la ETHERNET 0%s"
+
+#: View/CloudServers/editCPUs.ctp:1
+#: View/CloudServers/editName.ctp:1
+#: View/CloudServers/editRAMs.ctp:1
+msgid "Edit"
+msgstr "Modifica"
+
+#: View/CloudServers/editCPUs.ctp:14
+#: View/CloudServers/editDisk.ctp:29
+#: View/CloudServers/editName.ctp:4
+#: View/CloudServers/editRAMs.ctp:14
+msgid "Apply"
+msgstr "Applica"
+
+#: View/CloudServers/editCPUs.ctp:15
+#: View/CloudServers/editDisk.ctp:30
+#: View/CloudServers/editName.ctp:5
+#: View/CloudServers/editRAMs.ctp:15
+msgid "Abort"
+msgstr "Annulla"
+
+#: View/CloudServers/editCPUs.ctp:38
+msgid "Proceed modify CPUs for Cloud Server?"
+msgstr "Procedere con la modifica delle CPU per il Cloud Server?"
+
+#: View/CloudServers/editDisk.ctp:12
+msgid "Edit Disk Size"
+msgstr "Modifica Dimensione Disco"
+
+#: View/CloudServers/editDisk.ctp:14
+msgid "Remove Virtual Disk"
+msgstr "Rimuovi Disco Virtuale"
+
+#: View/CloudServers/editDisk.ctp:17
+msgid "Add Virtual Disk"
+msgstr "Aggiungi Disco Virtuale"
+
+#: View/CloudServers/editDisk.ctp:73
+msgid "Proceed to delete HD%s?"
+msgstr "Procedere con la cancellazione di HD%s?"
+
+#: View/CloudServers/editDisk.ctp:82
+msgid "Proceed to update HD%s?"
+msgstr "Procedere con la modifica di HD%s?"
+
+#: View/CloudServers/editName.ctp:31
+msgid "Proceed to rename Cloud Server?"
+msgstr "Procedere con modifica del nome del Cloud Server"
+
+#: View/CloudServers/editNetworks.ctp:5
+#: View/NewCloudServers/editNewNetworks.ctp:5
+msgid "Network Adapters"
+msgstr "Schede di Rete"
+
+#: View/CloudServers/editNetworks.ctp:11
+msgid "ETHERNET 0"
+msgstr "ETHERNET 0"
+
+#: View/CloudServers/editNetworks.ctp:14
+msgid "CONNECTED"
+msgstr "CONNESSO"
+
+#: View/CloudServers/editNetworks.ctp:16
+#: View/NewCloudServers/editNewNetworks.ctp:16;71
+msgid "DISCONNECTED"
+msgstr "DISCONNESSO"
+
+#: View/CloudServers/editNetworks.ctp:87
+msgid "Proceed to disconnect %s?"
+msgstr "Procedere con la disconnessione di %s?"
+
+#: View/CloudServers/editNetworks.ctp:105
+msgid "Connect Virtual Switch"
+msgstr "Connetti Virtual Switch"
+
+#: View/CloudServers/editNetworks.ctp:113
+msgid "Virtual Switch to connect"
+msgstr "Virtual Swicth da connettere"
+
+#: View/CloudServers/editNetworks.ctp:115;172;232
+#: View/VirtualSwitches/index.ctp:116
+msgid "OK"
+msgstr "OK"
+
+#: View/CloudServers/editNetworks.ctp:115;172;232
+#: View/VirtualSwitches/index.ctp:116
+msgid "Cancel"
+msgstr "Annulla"
+
+#: View/CloudServers/editNetworks.ctp:144
+msgid "Connect Public IPs"
+msgstr "Connetti Indirizzi IP"
+
+#: View/CloudServers/editNetworks.ctp:150
+msgid "Select IPs that you want to add"
+msgstr "Seleziona gli IP che vuoi connettere"
+
+#: View/CloudServers/editNetworks.ctp:154;213
+#: View/CloudServers/menu.ctp:25
+#: View/Dashboards/index.ctp:118
+#: View/LogAndJobs/index.ctp:99
+#: View/NewCloudServers/menu.ctp:25
+#: View/PublicIps/index.ctp:87
+#: View/VirtualSwitches/index.ctp:93
+msgid "Public IP"
+msgstr "IP Pubblico"
+
+#: View/CloudServers/editNetworks.ctp:155;214
+msgid "Subnet Mask"
+msgstr "Subnet Mask"
+
+#: View/CloudServers/editNetworks.ctp:156;215
+msgid "Gateway"
+msgstr "Gataway"
+
+#: View/CloudServers/editNetworks.ctp:203
+msgid "Disconnect Public IPs"
+msgstr "Disconnetti IP Pubblici"
+
+#: View/CloudServers/editNetworks.ctp:209
+msgid "Select the IPs that you want to disconnect"
+msgstr "Seleziona gli IP che vuoi disconnettere"
+
+#: View/CloudServers/editRAMs.ctp:38
+msgid "Proceed modify RAMs for Cloud Server?"
+msgstr "Procedere con la modifica delle RAM?"
+
+#: View/CloudServers/index.ctp:2
+#: View/Dashboards/index.ctp:16
+msgid "Cloud Server List"
+msgstr "Elenco Cloud Server"
+
+#: View/CloudServers/index.ctp:5
+msgid "New Cloud Server"
+msgstr "Nuovo Cloud Server"
+
+#: View/CloudServers/index.ctp:20
+#: View/Dashboards/index.ctp:19
+msgid "Name"
+msgstr "Nome"
+
+#: View/CloudServers/index.ctp:21
+#: View/Dashboards/index.ctp:20;61
+#: View/LogAndJobs/index.ctp:18;46
+msgid "Status"
+msgstr "Stato"
+
+#: View/CloudServers/index.ctp:22
+#: View/Dashboards/index.ctp:21
+msgid "Template"
+msgstr "Template"
+
+#: View/CloudServers/index.ctp:23
+#: View/CloudServers/view.ctp:91
+#: View/Dashboards/index.ctp:22
+#: View/NewCloudServers/view.ctp:61
+msgid "Hypervisor"
+msgstr "Hypervisor"
+
+#: View/CloudServers/index.ctp:24
+#: View/Dashboards/index.ctp:23
+msgid "CPU (core)"
+msgstr "CPU (core)"
+
+#: View/CloudServers/index.ctp:25
+#: View/Dashboards/index.ctp:24
+msgid "RAM (GB)"
+msgstr "RAM (GB)"
+
+#: View/CloudServers/index.ctp:26
+#: View/Dashboards/index.ctp:25
+msgid "Disk space (GB)"
+msgstr "Dischi (GB)"
+
+#: View/CloudServers/index.ctp:27
+#: View/Dashboards/index.ctp:26
+#: View/PublicIps/index.ctp:22
+#: View/VirtualSwitches/index.ctp:22
+msgid "Actions"
+msgstr "Azioni"
+
+#: View/CloudServers/index.ctp:39
+#: View/Dashboards/index.ctp:38
+msgid "Manage"
+msgstr "Gestisci"
+
+#: View/CloudServers/menu.ctp:11
+#: View/Dashboards/index.ctp:2;105
+#: View/LogAndJobs/index.ctp:89
+#: View/NewCloudServers/menu.ctp:11
+#: View/PublicIps/index.ctp:77
+#: View/VirtualSwitches/index.ctp:78
+msgid "Dashboard"
+msgstr "Cruscotto"
+
+#: View/CloudServers/menu.ctp:15
+#: View/Dashboards/index.ctp:112
+#: View/LogAndJobs/index.ctp:93
+#: View/NewCloudServers/menu.ctp:15
+#: View/PublicIps/index.ctp:21;81
+#: View/VirtualSwitches/index.ctp:82
+msgid "Cloud Server"
+msgstr "Cloud Server"
+
+#: View/CloudServers/menu.ctp:18
+#: View/NewCloudServers/menu.ctp:18
+msgid "Cloud Servers legend"
+msgstr "Legenda Cloud Server"
+
+#: View/CloudServers/menu.ctp:22
+#: View/Dashboards/index.ctp:115
+#: View/LogAndJobs/index.ctp:96
+#: View/NewCloudServers/menu.ctp:22
+#: View/PublicIps/index.ctp:84
+#: View/VirtualSwitches/index.ctp:86
+msgid "Virtual Swich"
+msgstr "Virtual Swich"
+
+#: View/CloudServers/menu.ctp:30
+#: View/Dashboards/index.ctp:122
+#: View/LogAndJobs/index.ctp:2;104
+#: View/NewCloudServers/menu.ctp:30
+#: View/PublicIps/index.ctp:94
+#: View/VirtualSwitches/index.ctp:97
+msgid "Logs and Jobs"
+msgstr "Log e Operazioni in Corso"
+
+#: View/CloudServers/serverStop.ctp:3
+msgid "Server stop options"
+msgstr "Opzioni di Arresto del Cloud Server"
+
+#: View/CloudServers/serverStop.ctp:5
+msgid "Choose which method invoke to stop the server"
+msgstr "Scegliere il metodo di arresto del Cloud Server"
+
+#: View/CloudServers/serverStop.ctp:7
+#: View/CloudServers/view.ctp:52
+msgid "Shutdown"
+msgstr "Shutdown"
+
+#: View/CloudServers/serverStop.ctp:8
+msgid "Power Off"
+msgstr "Spengnimento"
+
+#: View/CloudServers/serverStop.ctp:9
+msgid "Reset"
+msgstr "Riavvia"
+
+#: View/CloudServers/view.ctp:27
+msgid "Manage Cloud Server"
+msgstr "Gestione Cloud Server"
+
+#: View/CloudServers/view.ctp:29
+#: View/LogAndJobs/index.ctp:5
+msgid "Refresh"
+msgstr "Aggiorna"
+
+#: View/CloudServers/view.ctp:37
+#: View/NewCloudServers/view.ctp:50
+msgid "Cloud Server Name"
+msgstr "Nome del Cloud Server"
+
+#: View/CloudServers/view.ctp:45
+msgid "Cloud Server State"
+msgstr "Stato del Cloud Server"
+
+#: View/CloudServers/view.ctp:55
+msgid "Start"
+msgstr "Start"
+
+#: View/CloudServers/view.ctp:56
+msgid "Archive"
+msgstr "Archivia"
+
+#: View/CloudServers/view.ctp:59
+msgid "Restore"
+msgstr "Ripristina"
+
+#: View/CloudServers/view.ctp:94
+msgid "HD0 Size"
+msgstr "Dimensione HD0"
+
+#: View/CloudServers/view.ctp:99
+msgid "S/O template"
+msgstr "Sistema Operativo"
+
+#: View/CloudServers/view.ctp:102
+msgid "HD1 Size"
+msgstr "Dimensione HD1"
+
+#: View/CloudServers/view.ctp:108
+msgid "Virtual CPUs"
+msgstr "CPU Virtuali"
+
+#: View/CloudServers/view.ctp:116
+msgid "HD2 Size"
+msgstr "Dimensione HD2"
+
+#: View/CloudServers/view.ctp:122
+#: View/NewCloudServers/view.ctp:157
+msgid "RAM"
+msgstr "RAM"
+
+#: View/CloudServers/view.ctp:130
+msgid "HD3 Size"
+msgstr "Dimensione HD3"
+
+#: View/Dashboards/index.ctp:6
+msgid "Available Credit"
+msgstr "Credito Disponibile"
+
+#: View/Dashboards/index.ctp:56
+#: View/LogAndJobs/index.ctp:41
+msgid "Log List"
+msgstr "Operazioni Effettuate"
+
+#: View/Dashboards/index.ctp:60
+#: View/LogAndJobs/index.ctp:16;45
+msgid "Command"
+msgstr "Comando"
+
+#: View/Dashboards/index.ctp:62
+#: View/LogAndJobs/index.ctp:19;47
+msgid "Context"
+msgstr "Contesto"
+
+#: View/Dashboards/index.ctp:63
+#: View/LogAndJobs/index.ctp:20;48
+msgid "User"
+msgstr "Utente"
+
+#: View/Dashboards/index.ctp:64
+#: View/LogAndJobs/index.ctp:21;49
+msgid "Begin Date"
+msgstr "Data Inizio"
+
+#: View/Dashboards/index.ctp:65
+#: View/LogAndJobs/index.ctp:50
+msgid "End Date"
+msgstr "Data Fine"
+
+#: View/Dashboards/index.ctp:83
+#: View/LogAndJobs/index.ctp:68
+#: View/PublicIps/index.ctp:55
+#: View/VirtualSwitches/index.ctp:55
+msgid "Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}"
+msgstr "Pagina {:page} di {:pages}, mostrati {:current} elementi di {:count}, elementi da {:start} a {:end}"
+
+#: View/Dashboards/index.ctp:88
+#: View/LogAndJobs/index.ctp:73
+#: View/PublicIps/index.ctp:61
+#: View/VirtualSwitches/index.ctp:61
+msgid "previous"
+msgstr "precedente"
+
+#: View/Dashboards/index.ctp:90
+#: View/LogAndJobs/index.ctp:75
+#: View/PublicIps/index.ctp:63
+#: View/VirtualSwitches/index.ctp:63
+msgid "next"
+msgstr "successivo"
+
+#: View/Dashboards/index.ctp:108
+msgid "Dashboard legend"
+msgstr "Legenda Cruscotto"
+
+#: View/Layouts/default-cake.ctp:55
+#: View/Layouts/default.ctp:57
+msgid "Please Wait..."
+msgstr "Attendere prego...."
+
+#: View/Layouts/default.ctp:92
+msgid "Datacenter"
+msgstr "Datacenter"
+
+#: View/Layouts/default.ctp:100
+msgid "Change"
+msgstr "Cambio"
+
+#: View/Layouts/default.ctp:122
+msgid "Welcome"
+msgstr "Benvenuto"
+
+#: View/Layouts/default.ctp:130
+msgid "Logout"
+msgstr "Esci"
+
+#: View/LogAndJobs/index.ctp:12
+msgid "Active jobs"
+msgstr "Operazioni in corso"
+
+#: View/LogAndJobs/index.ctp:17
+msgid "Progress"
+msgstr "Avanzamento"
+
+#: View/LogAndJobs/index.ctp:35
+msgid "There are no running jobs"
+msgstr "Non sono presenti operazioni in corso"
+
+#: View/LogAndJobs/index.ctp:107
+msgid "Logs and Jobs legend"
+msgstr "Legenda Log ed operazioni in corso"
+
+#: View/Logins/login.ctp:4;24
+msgid "Login"
+msgstr "Accedi"
+
+#: View/Logins/login.ctp:19
+msgid "Datacenters"
+msgstr "Datacenters"
+
+#: View/NewCloudServers/editNewNetworks.ctp:8
+msgid "ETHERNET 01"
+msgstr ""
+
+#: View/NewCloudServers/editNewNetworks.ctp:9
+msgid "IPAddress will be assigned automatically"
+msgstr "Un nuovo indirizzo IP sara' assegnato automaticamente"
+
+#: View/NewCloudServers/editNewNetworks.ctp:12
+msgid "ETHERNET 02"
+msgstr ""
+
+#: View/NewCloudServers/editNewNetworks.ctp:34;89
+msgid "IP"
+msgstr ""
+
+#: View/NewCloudServers/editNewNetworks.ctp:51;106
+msgid "NETMASK"
+msgstr ""
+
+#: View/NewCloudServers/editNewNetworks.ctp:67
+msgid "ETHERNET 03"
+msgstr ""
+
+#: View/NewCloudServers/inprogress.ctp:2
+msgid "Request successfully sent!"
+msgstr "Richiesta inviata con successo!"
+
+#: View/NewCloudServers/inprogress.ctp:5
+msgid "The creation of your new cloud server is now started."
+msgstr "La creazione del nuovo Cloud Server e' iniziata"
+
+#: View/NewCloudServers/inprogress.ctp:9
+msgid "Please, click on the \"Job\" menu' item to monitor the creation progress"
+msgstr "Selezionare la voce di menu' \"Log e Operazioni in coda\" per monitorare il processo di creazione"
+
+#: View/NewCloudServers/view.ctp:46
+msgid "New Cloud Server definition"
+msgstr "Definizione del nuovo Cloud Server"
+
+#: View/NewCloudServers/view.ctp:58
+msgid "Define cloud server name (unique within this datacenter)"
+msgstr "Definire il nome del Cloud Server (unico all'interno del datacenter)"
+
+#: View/NewCloudServers/view.ctp:77
+msgid "Choose your Hypervisor"
+msgstr "Scegliere un Hypervisor"
+
+#: View/NewCloudServers/view.ctp:80
+msgid "OS-template"
+msgstr "Sistema Operativo"
+
+#: View/NewCloudServers/view.ctp:97
+msgid "Definition of user administrator password"
+msgstr "Definizione della password di amministratore"
+
+#: View/NewCloudServers/view.ctp:100
+msgid "Password"
+msgstr "Password"
+
+#: View/NewCloudServers/view.ctp:112
+msgid "Min 7 char with at least a number and a capital letter"
+msgstr "Minimo 7 caratteri con almeno un numero ed una lettera maiuscola"
+
+#: View/NewCloudServers/view.ctp:115
+msgid "Password check"
+msgstr "Controllo Password"
+
+#: View/NewCloudServers/view.ctp:127
+msgid "Retype the previus password to compare"
+msgstr "Ripetere la password precedente"
+
+#: View/NewCloudServers/view.ctp:131
+msgid "CPU and RAM definition"
+msgstr "Definizione CPU e RAM"
+
+#: View/NewCloudServers/view.ctp:134
+msgid "CPU"
+msgstr "CPU"
+
+#: View/NewCloudServers/view.ctp:151
+msgid "Core"
+msgstr "Core"
+
+#: View/NewCloudServers/view.ctp:154
+msgid "Select how many cores you need"
+msgstr "Selezionare il numero di core richiesti"
+
+#: View/NewCloudServers/view.ctp:174;196;223;252;280
+msgid "GB"
+msgstr ""
+
+#: View/NewCloudServers/view.ctp:177
+msgid "Define how many GB you want"
+msgstr "Selezionare il numero di GB di RAM richiesti"
+
+#: View/NewCloudServers/view.ctp:181
+msgid "Hard disk(s) definition"
+msgstr "Definizione dei Dischi Virtuali"
+
+#: View/NewCloudServers/view.ctp:184
+msgid "Hard disk #0"
+msgstr "Disco virtuale #0"
+
+#: View/NewCloudServers/view.ctp:210
+msgid "Hard disk #1"
+msgstr "Disco virtuale #1"
+
+#: View/NewCloudServers/view.ctp:226;254;282
+msgid "Activate disk"
+msgstr "Attivazione Disco"
+
+#: View/NewCloudServers/view.ctp:239
+msgid "Hard disk #2"
+msgstr "Disco virtuale #2"
+
+#: View/NewCloudServers/view.ctp:267
+msgid "Hard disk #3"
+msgstr "Disco virtuale #3"
+
+#: View/NewCloudServers/view.ctp:298
+msgid "Create server"
+msgstr "Crea Cloud Server"
+
+#: View/PublicIps/index.ctp:2
+msgid "IP Addresses"
+msgstr "IP Pubblici"
+
+#: View/PublicIps/index.ctp:6
+msgid "New IP Address"
+msgstr "Nuovo IP Pubblico"
+
+#: View/PublicIps/index.ctp:13
+msgid "Are you sure you want to add a new IP Address?"
+msgstr "Sei sicuro di voler aggiungere un nuovo IP Pubblico?"
+
+#: View/PublicIps/index.ctp:19
+msgid "IP Address"
+msgstr "IP Pubblico"
+
+#: View/PublicIps/index.ctp:20
+msgid "Assigned"
+msgstr "Connesso"
+
+#: View/PublicIps/index.ctp:28
+#: View/VirtualSwitches/index.ctp:28
+msgid "Yes"
+msgstr "Si"
+
+#: View/PublicIps/index.ctp:28
+#: View/VirtualSwitches/index.ctp:28
+msgid "No"
+msgstr "No"
+
+#: View/PublicIps/index.ctp:32
+#: View/VirtualSwitches/index.ctp:32
+msgid "Delete"
+msgstr "Elimina"
+
+#: View/PublicIps/index.ctp:44
+#: View/VirtualSwitches/index.ctp:44
+msgid "Are you sure you want to delete  %s?"
+msgstr "Sei sicuro di voler eliminare %s?"
+
+#: View/PublicIps/index.ctp:90
+msgid "Public IP legend"
+msgstr "Legenda Indirizzi IP Pubblici"
+
+#: View/VirtualSwitches/index.ctp:2
+msgid "Virtual Switches"
+msgstr "Virtual Switches"
+
+#: View/VirtualSwitches/index.ctp:6
+msgid "New Virtual Switch"
+msgstr "Nuovo Virtual Switch"
+
+#: View/VirtualSwitches/index.ctp:19
+msgid "Virtual Switch"
+msgstr "Virtual Switch"
+
+#: View/VirtualSwitches/index.ctp:20
+msgid "Connected"
+msgstr "Connesso"
+
+#: View/VirtualSwitches/index.ctp:21
+msgid "Cloud Servers"
+msgstr "Cloud Server"
+
+#: View/VirtualSwitches/index.ctp:89
+msgid "VirtualSwitch legend"
+msgstr "Legenda Virtual Switches"
+
+#: View/VirtualSwitches/index.ctp:109
+msgid "Add Virtual Switch"
+msgstr "Aggiungi Virtual Switch"
+
+
+#: View/Layouts/default.ctp:19
+msgid "Aruba Spa - PHP Cloud Admin Panel"
+msgstr "Aruba Spa - Pannello di Amministrazione Cloud PHP"
+
+msgid "Add IPs"
+msgstr "Collega IP"
+
+msgid "Remove IPs"
+msgstr "Rimuovi IP"
+
+
+msgid "Connect Virtual Switch"
+msgstr "Connetti Virtual Switch"
+
+msgid "Disconnect"
+msgstr "Disconnetti"
+
+
