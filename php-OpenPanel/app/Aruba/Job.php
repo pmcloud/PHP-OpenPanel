@@ -43,6 +43,13 @@ class Job
 
   /**
    * 
+   * @var int $LicenseId
+   * @access public
+   */
+  public $LicenseId;
+
+  /**
+   * 
    * @var string $OperationName
    * @access public
    */
@@ -109,6 +116,7 @@ class Job
    * @param dateTime $CreationDate
    * @param int $JobId
    * @param dateTime $LastUpdateDate
+   * @param int $LicenseId
    * @param string $OperationName
    * @param int $Progress
    * @param int $ResourceId
@@ -120,11 +128,12 @@ class Job
    * @param string $Username
    * @access public
    */
-  public function __construct($CreationDate, $JobId, $LastUpdateDate, $OperationName, $Progress, $ResourceId, $ResourceValue, $ServerId, $ServerName, $Status, $UserId, $Username)
+  public function __construct($CreationDate, $JobId, $LastUpdateDate, $OperationName, $Progress, $ResourceId, $ResourceValue, $ServerId, $ServerName, $Status, $UserId, $Username, $LicenseId = null)
   {
     $this->CreationDate = $CreationDate;
     $this->JobId = $JobId;
     $this->LastUpdateDate = $LastUpdateDate;
+    $this->LicenseId = $LicenseId;
     $this->OperationName = $OperationName;
     $this->Progress = $Progress;
     $this->ResourceId = $ResourceId;

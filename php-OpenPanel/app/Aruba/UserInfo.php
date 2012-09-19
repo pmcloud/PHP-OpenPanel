@@ -36,6 +36,13 @@ class UserInfo
 
   /**
    * 
+   * @var array $Permission
+   * @access public
+   */
+  public $Permission;
+
+  /**
+   * 
    * @var int $UserID
    * @access public
    */
@@ -66,16 +73,18 @@ class UserInfo
    * 
    * @param int $CompanyID
    * @param string $CompanyName
+   * @param array $Permission
    * @param int $UserID
    * @param string $UserName
    * @param Roles $UserRole
    * @param UserStatus $UserStatus
    * @access public
    */
-  public function __construct($CompanyID, $CompanyName, $UserID, $UserName, $UserRole, $UserStatus)
+  public function __construct($CompanyID, $CompanyName, $UserID, $UserName, $UserRole, $UserStatus, $Permission = null)
   {
     $this->CompanyID = $CompanyID;
     $this->CompanyName = $CompanyName;
+    $this->Permission = $Permission;
     $this->UserID = $UserID;
     $this->UserName = $UserName;
     $this->UserRole = $UserRole;

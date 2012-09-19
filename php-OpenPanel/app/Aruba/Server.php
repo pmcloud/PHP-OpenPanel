@@ -22,6 +22,13 @@ class Server
 
   /**
    * 
+   * @var boolean $Busy
+   * @access public
+   */
+  public $Busy;
+
+  /**
+   * 
    * @var int $CPUQuantity
    * @access public
    */
@@ -113,6 +120,7 @@ class Server
 
   /**
    * 
+   * @param boolean $Busy
    * @param int $CPUQuantity
    * @param int $CompanyId
    * @param int $DatacenterId
@@ -128,8 +136,9 @@ class Server
    * @param int $UserId
    * @access public
    */
-  public function __construct($CPUQuantity, $CompanyId, $DatacenterId, $HDQuantity, $HDTotalSize, $HypervisorServerType, $HypervisorType, $Name, $OSTemplateId, $RAMQuantity, $ServerId, $ServerStatus, $UserId)
+  public function __construct($CPUQuantity, $CompanyId, $DatacenterId, $HDQuantity, $HDTotalSize, $HypervisorServerType, $HypervisorType, $Name, $OSTemplateId, $RAMQuantity, $ServerId, $ServerStatus, $UserId, $Busy = null)
   {
+    $this->Busy = $Busy;
     $this->CPUQuantity = $CPUQuantity;
     $this->CompanyId = $CompanyId;
     $this->DatacenterId = $DatacenterId;

@@ -19,13 +19,13 @@
 
 class IPAddress
 {
-	
+
   /**
    * 
    * @var int $ResourceId
    * @access public
    */
-  public $ResourceId;	
+  public $ResourceId;
 
   /**
    * 
@@ -65,8 +65,8 @@ class IPAddress
    */
   public function __construct($ResourceId, $Gateway, $ServerId, $SubNetMask, $Value)
   {
-    $this->ResourceId= $ResourceId;
-  	$this->Gateway = $Gateway;
+	$this->ResourceId= $ResourceId;
+    $this->Gateway = $Gateway;
     $this->ServerId = $ServerId;
     $this->SubNetMask = $SubNetMask;
     $this->Value = $Value;

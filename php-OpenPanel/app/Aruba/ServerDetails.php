@@ -113,6 +113,13 @@ class ServerDetails
 
   /**
    * 
+   * @var array $ScheduledOperations
+   * @access public
+   */
+  public $ScheduledOperations;
+
+  /**
+   * 
    * @var int $ServerId
    * @access public
    */
@@ -175,6 +182,7 @@ class ServerDetails
    * @param Template $OSTemplate
    * @param array $Parameters
    * @param Ram $RAMQuantity
+   * @param array $ScheduledOperations
    * @param int $ServerId
    * @param ServerStatus $ServerStatus
    * @param array $Snapshots
@@ -184,7 +192,7 @@ class ServerDetails
    * @param array $VirtualDisks
    * @access public
    */
-  public function __construct($ActiveJobs, $CPUQuantity, $CompanyId, $CreationDate, $DatacenterId, $HypervisorServerType, $HypervisorType, $Name, $NetworkAdapters, $Note, $OSTemplate, $Parameters, $RAMQuantity, $ServerId, $ServerStatus, $Snapshots, $ToolsAvailable, $UserId, $VirtualDVDs, $VirtualDisks)
+  public function __construct($ActiveJobs, $CPUQuantity, $CompanyId, $CreationDate, $DatacenterId, $HypervisorServerType, $HypervisorType, $Name, $NetworkAdapters, $Note, $OSTemplate, $Parameters, $RAMQuantity, $ServerId, $ServerStatus, $Snapshots, $ToolsAvailable, $UserId, $VirtualDVDs, $VirtualDisks, $ScheduledOperations = null)
   {
     $this->ActiveJobs = $ActiveJobs;
     $this->CPUQuantity = $CPUQuantity;
@@ -199,6 +207,7 @@ class ServerDetails
     $this->OSTemplate = $OSTemplate;
     $this->Parameters = $Parameters;
     $this->RAMQuantity = $RAMQuantity;
+    $this->ScheduledOperations = $ScheduledOperations;
     $this->ServerId = $ServerId;
     $this->ServerStatus = $ServerStatus;
     $this->Snapshots = $Snapshots;

@@ -36,10 +36,24 @@ class VirtualDatacenterCost
 
   /**
    * 
+   * @var FTPCost $FTPCost
+   * @access public
+   */
+  public $FTPCost;
+
+  /**
+   * 
    * @var IpAddressCost $IpAddressCost
    * @access public
    */
   public $IpAddressCost;
+
+  /**
+   * 
+   * @var array $PleskLicensesCost
+   * @access public
+   */
+  public $PleskLicensesCost;
 
   /**
    * 
@@ -59,16 +73,20 @@ class VirtualDatacenterCost
    * 
    * @param string $CurrencyCode
    * @param int $DatacenterId
+   * @param FTPCost $FTPCost
    * @param IpAddressCost $IpAddressCost
+   * @param array $PleskLicensesCost
    * @param array $ServerCost
    * @param ResourceCost $VLanCost
    * @access public
    */
-  public function __construct($CurrencyCode, $DatacenterId, $IpAddressCost, $ServerCost, $VLanCost)
+  public function __construct($CurrencyCode, $DatacenterId, $IpAddressCost, $ServerCost, $VLanCost, $FTPCost = null,$PleskLicensesCost = null)
   {
     $this->CurrencyCode = $CurrencyCode;
     $this->DatacenterId = $DatacenterId;
+    $this->FTPCost = $FTPCost;
     $this->IpAddressCost = $IpAddressCost;
+    $this->PleskLicensesCost = $PleskLicensesCost;
     $this->ServerCost = $ServerCost;
     $this->VLanCost = $VLanCost;
   }

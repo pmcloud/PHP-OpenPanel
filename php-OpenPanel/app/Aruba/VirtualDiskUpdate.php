@@ -16,6 +16,7 @@
  * IN THE SOFTWARE.
  * 
  */
+
 include_once 'AppVirtualDiskOperationType.php';
 
 class VirtualDiskUpdate extends VirtualDiskDetails
@@ -35,7 +36,7 @@ class VirtualDiskUpdate extends VirtualDiskDetails
    */
   public function __construct($VirtualDiskUpdateType,$CustomVirtualDiskPath, $Size, $VirtualDiskType)
   {
-  	parent::__construct($CustomVirtualDiskPath, $Size, $VirtualDiskType);
+	parent::__construct($CustomVirtualDiskPath, $Size, $VirtualDiskType);
     $this->VirtualDiskUpdateType = $VirtualDiskUpdateType;
   }
 

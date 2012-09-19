@@ -43,6 +43,13 @@ class VirtualDatacenter
 
   /**
    * 
+   * @var array $PleskLicenses
+   * @access public
+   */
+  public $PleskLicenses;
+
+  /**
+   * 
    * @var array $Servers
    * @access public
    */
@@ -60,15 +67,17 @@ class VirtualDatacenter
    * @param int $DatacenterId
    * @param FTP $FTP
    * @param array $IpAddresses
+   * @param array $PleskLicenses
    * @param array $Servers
    * @param array $VLans
    * @access public
    */
-  public function __construct($DatacenterId, $FTP, $IpAddresses, $Servers, $VLans)
+  public function __construct($DatacenterId, $FTP, $IpAddresses, $Servers, $VLans, $PleskLicenses = null)
   {
     $this->DatacenterId = $DatacenterId;
     $this->FTP = $FTP;
     $this->IpAddresses = $IpAddresses;
+    $this->PleskLicenses = $PleskLicenses;
     $this->Servers = $Servers;
     $this->VLans = $VLans;
   }

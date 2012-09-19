@@ -19,14 +19,13 @@
 
 class VLan
 {
-	
-	/**
+
+  /**
    * 
    * @var int $ResourceId
    * @access public
    */
-  public $ResourceId;	
-
+  public $ResourceId;
   /**
    * 
    * @var string $Name
@@ -57,8 +56,8 @@ class VLan
    */
   public function __construct($ResourceId,$Name, $ServerIds, $VlanCode)
   {
-  	$this->ResourceId= $ResourceId;
-    $this->Name = $Name;
+	$this->ResourceId= $ResourceId;    
+	$this->Name = $Name;
     $this->ServerIds = $ServerIds;
     $this->VlanCode = $VlanCode;
   }

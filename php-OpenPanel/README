@@ -28,7 +28,7 @@ are within the "app" folder; inside that, you can find the classic Cake's hierar
 particular package named "Aruba".
 
 In the "Aruba" folder are present all that classes that bind the methods exposed by the main 
-webservice end-point: WsEndUser - version 1.4.
+webservice end-point: WsEndUser - version 1.9.
 These elements have been created thanks to the "Walle WSDL2PHP" Generator (v1.5.1-6) downloadable
 from this url: https://github.com/walle/wsdl2phpgenerator.
 

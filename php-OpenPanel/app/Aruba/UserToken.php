@@ -29,6 +29,13 @@ class UserToken
 
   /**
    * 
+   * @var TokenType $TokenType
+   * @access public
+   */
+  public $TokenType;
+
+  /**
+   * 
    * @var string $UserName
    * @access public
    */
@@ -37,12 +44,14 @@ class UserToken
   /**
    * 
    * @param string $Token
+   * @param TokenType $TokenType
    * @param string $UserName
    * @access public
    */
-  public function __construct($Token, $UserName)
+  public function __construct($Token, $UserName, $TokenType = null)
   {
     $this->Token = $Token;
+    $this->TokenType = $TokenType;
     $this->UserName = $UserName;
   }
 

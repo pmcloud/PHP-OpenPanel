@@ -63,7 +63,5 @@ class WsResult
     $this->ResultMessage = $ResultMessage;
     $this->Success = $Success;
   }
-  
-  
 
 }

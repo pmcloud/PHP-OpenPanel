@@ -17,6 +17,26 @@
  * 
  */
 
+include_once('SetRemoveVLan.php');
+include_once('SetRemoveVLanResponse.php');
+include_once('SetRenameVLan.php');
+include_once('SetRenameVLanResponse.php');
+include_once('SetEnqueueAssociateVLan.php');
+include_once('SetEnqueueAssociateVLanResponse.php');
+include_once('SetEnqueueDeassociateVLan.php');
+include_once('SetEnqueueDeassociateVLanResponse.php');
+include_once('SetEnqueueCreateFTPAccount.php');
+include_once('SetEnqueueCreateFTPAccountResponse.php');
+include_once('SetEnqueueResizeFTPAccount.php');
+include_once('SetEnqueueResizeFTPAccountResponse.php');
+include_once('SetReadNews.php');
+include_once('SetReadNewsResponse.php');
+include_once('GetVDCGraph.php');
+include_once('GetVDCGraphResponse.php');
+include_once('SetAddVDCGraph.php');
+include_once('SetAddVDCGraphResponse.php');
+include_once('SetUpdateVDCGraph.php');
+include_once('SetUpdateVDCGraphResponse.php');
 include_once('GetUserAuthenticationToken.php');
 include_once('GetUserAuthenticationTokenResponse.php');
 include_once('GetAllServers.php');
@@ -47,7 +67,63 @@ include_once('GetVirtualDatacenterCost.php');
 include_once('GetVirtualDatacenterCostResponse.php');
 include_once('GetDatacenterConfigurations.php');
 include_once('GetDatacenterConfigurationsResponse.php');
-include_once('ExceptionInfo.php');
+include_once('GetCompanyByUrl.php');
+include_once('GetCompanyByUrlResponse.php');
+include_once('GetHypervisors.php');
+include_once('GetHypervisorsResponse.php');
+include_once('GetPurchasedVLans.php');
+include_once('GetPurchasedVLansResponse.php');
+include_once('GetPurchasedIpAddresses.php');
+include_once('GetPurchasedIpAddressesResponse.php');
+include_once('GetJobs.php');
+include_once('GetJobsResponse.php');
+include_once('GetAllLogs.php');
+include_once('GetAllLogsResponse.php');
+include_once('GetLogs.php');
+include_once('GetLogsResponse.php');
+include_once('GetCustomVirtualDisks.php');
+include_once('GetCustomVirtualDisksResponse.php');
+include_once('GetIsos.php');
+include_once('GetIsosResponse.php');
+include_once('GetUserInfo.php');
+include_once('GetUserInfoResponse.php');
+include_once('GetPurchasedFTP.php');
+include_once('GetPurchasedFTPResponse.php');
+include_once('GetNews.php');
+include_once('GetNewsResponse.php');
+include_once('SetEnqueueServerDeletion.php');
+include_once('SetEnqueueServerDeletionResponse.php');
+include_once('SetEnqueueServerRestart.php');
+include_once('SetEnqueueServerRestartResponse.php');
+include_once('SetEnqueueServerArchiviation.php');
+include_once('SetEnqueueServerArchiviationResponse.php');
+include_once('SetEnqueueServerRestore.php');
+include_once('SetEnqueueServerRestoreResponse.php');
+include_once('SetRenameServer.php');
+include_once('SetRenameServerResponse.php');
+include_once('SetEnqueueMountDvdIso.php');
+include_once('SetEnqueueMountDvdIsoResponse.php');
+include_once('SetEnqueueUnmountDvdIso.php');
+include_once('SetEnqueueUnmountDvdIsoResponse.php');
+include_once('SetEnqueueVirtualDiskManage.php');
+include_once('SetEnqueueVirtualDiskManageResponse.php');
+include_once('SetEnqueueHardwareUpdate.php');
+include_once('SetEnqueueHardwareUpdateResponse.php');
+include_once('SetChangeNoteServer.php');
+include_once('SetChangeNoteServerResponse.php');
+include_once('SetPurchaseIpAddress.php');
+include_once('SetPurchaseIpAddressResponse.php');
+include_once('SetRemoveIpAddress.php');
+include_once('SetRemoveIpAddressResponse.php');
+include_once('SetEnqueueAssociateIpAddress.php');
+include_once('SetEnqueueAssociateIpAddressResponse.php');
+include_once('SetEnqueueDeassociateIpAddress.php');
+include_once('SetEnqueueDeassociateIpAddressResponse.php');
+include_once('SetPurchaseVLan.php');
+include_once('SetPurchaseVLanResponse.php');
+include_once('VLan.php');
+include_once('CloudEntity.php');
+include_once('ScheduledOperationRequest.php');
 include_once('UserToken.php');
 include_once('Company.php');
 include_once('Hypervisor.php');
@@ -57,22 +133,26 @@ include_once('VirtualDatacenter.php');
 include_once('FTP.php');
 include_once('FTPServer.php');
 include_once('IPAddress.php');
-include_once('CloudEntity.php');
+include_once('PleskLicense.php');
+include_once('PurchasedAddonLicense.php');
+include_once('LicenseKey.php');
 include_once('ServerDetails.php');
 include_once('Job.php');
 include_once('Cpu.php');
 include_once('NetworkAdapter.php');
-include_once('VLan.php');
 include_once('Template.php');
 include_once('KeyValuePair.php');
 include_once('Ram.php');
+include_once('ScheduledOperation.php');
 include_once('Snapshot.php');
 include_once('VirtualDVD.php');
 include_once('VirtualDisk.php');
 include_once('VirtualDatacenterCost.php');
 include_once('AggregateCost.php');
-include_once('IpAddressCost.php');
+include_once('FTPCost.php');
 include_once('ResourceCost.php');
+include_once('IpAddressCost.php');
+include_once('PleskLicenseCost.php');
 include_once('ServerCost.php');
 include_once('VirtualDiskCost.php');
 include_once('Server.php');
@@ -85,6 +165,9 @@ include_once('DatacenterConfig.php');
 include_once('CustomVirtualDisk.php');
 include_once('IsoDetails.php');
 include_once('UserInfo.php');
+include_once('Permission.php');
+include_once('News.php');
+include_once('ScheduleLog.php');
 include_once('NewServer.php');
 include_once('NetworkAdapterConfiguration.php');
 include_once('PrivateVLanDetails.php');
@@ -95,9 +178,11 @@ include_once('VirtualDiskUpdate.php');
 include_once('ServerRestore.php');
 include_once('NewIso.php');
 include_once('ExportVirtualDisk.php');
+include_once('ExceptionInfo.php');
 include_once('CompanySettings.php');
 include_once('CompanyDataCenterSettings.php');
 include_once('CompanySupportSettings.php');
+include_once('WsResultOfVLan.php');
 include_once('WsResult.php');
 include_once('WsResultOfstring.php');
 include_once('WsResultOfUserToken.php');
@@ -118,78 +203,24 @@ include_once('WsResultOfArrayOfCustomVirtualDisk.php');
 include_once('WsResultOfArrayOfIsoDetails.php');
 include_once('WsResultOfUserInfo.php');
 include_once('WsResultOfFTP.php');
+include_once('WsResultOfArrayOfNews.php');
+include_once('WsResultOfArrayOfScheduledOperation.php');
+include_once('WsResultOfArrayOfScheduleLog.php');
 include_once('WsResultOfIPAddress.php');
-include_once('WsResultOfVLan.php');
-include_once('SetEnqueueAssociateVLan.php');
-include_once('SetEnqueueAssociateVLanResponse.php');
-include_once('SetEnqueueDeassociateVLan.php');
-include_once('SetEnqueueDeassociateVLanResponse.php');
-include_once('SetEnqueueCreateFTPAccount.php');
-include_once('SetEnqueueCreateFTPAccountResponse.php');
-include_once('SetEnqueueResizeFTPAccount.php');
-include_once('SetEnqueueResizeFTPAccountResponse.php');
-include_once('GetVDCGraph.php');
-include_once('GetVDCGraphResponse.php');
-include_once('SetAddVDCGraph.php');
-include_once('SetAddVDCGraphResponse.php');
-include_once('SetUpdateVDCGraph.php');
-include_once('SetUpdateVDCGraphResponse.php');
-include_once('GetCompanyByUrl.php');
-include_once('GetCompanyByUrlResponse.php');
-include_once('GetHypervisors.php');
-include_once('GetHypervisorsResponse.php');
-include_once('GetPurchasedVLans.php');
-include_once('GetPurchasedVLansResponse.php');
-include_once('GetPurchasedIpAddresses.php');
-include_once('GetPurchasedIpAddressesResponse.php');
-include_once('GetJobs.php');
-include_once('GetJobsResponse.php');
-include_once('GetLogs.php');
-include_once('GetLogsResponse.php');
-include_once('GetCustomVirtualDisks.php');
-include_once('GetCustomVirtualDisksResponse.php');
-include_once('GetIsos.php');
-include_once('GetIsosResponse.php');
-include_once('GetUserInfo.php');
-include_once('GetUserInfoResponse.php');
-include_once('GetPurchasedFTP.php');
-include_once('GetPurchasedFTPResponse.php');
+include_once('SetAddServerScheduledOperation.php');
+include_once('SetAddServerScheduledOperationResponse.php');
+include_once('SetUpdateServerScheduledOperation.php');
+include_once('SetUpdateServerScheduledOperationResponse.php');
+include_once('SetRemoveServerScheduledOperation.php');
+include_once('SetRemoveServerScheduledOperationResponse.php');
+include_once('GetScheduledOperations.php');
+include_once('GetScheduledOperationsResponse.php');
+include_once('GetServerSchedulesLogs.php');
+include_once('GetServerSchedulesLogsResponse.php');
 include_once('SetEnqueueServerCreation.php');
 include_once('SetEnqueueServerCreationResponse.php');
 include_once('SetEnqueueServerUpdate.php');
 include_once('SetEnqueueServerUpdateResponse.php');
-include_once('SetEnqueueServerDeletion.php');
-include_once('SetEnqueueServerDeletionResponse.php');
-include_once('SetEnqueueServerRestart.php');
-include_once('SetEnqueueServerRestartResponse.php');
-include_once('SetEnqueueServerArchiviation.php');
-include_once('SetEnqueueServerArchiviationResponse.php');
-include_once('SetEnqueueServerRestore.php');
-include_once('SetEnqueueServerRestoreResponse.php');
-include_once('SetRenameServer.php');
-include_once('SetRenameServerResponse.php');
-include_once('SetEnqueueMountDvdIso.php');
-include_once('SetEnqueueMountDvdIsoResponse.php');
-include_once('SetEnqueueUnmountDvdIso.php');
-include_once('SetEnqueueUnmountDvdIsoResponse.php');
-include_once('SetEnqueueVirtualDiskManage.php');
-include_once('SetEnqueueVirtualDiskManageResponse.php');
-include_once('SetChangeNoteServer.php');
-include_once('SetChangeNoteServerResponse.php');
-include_once('SetPurchaseIpAddress.php');
-include_once('SetPurchaseIpAddressResponse.php');
-include_once('SetRemoveIpAddress.php');
-include_once('SetRemoveIpAddressResponse.php');
-include_once('SetEnqueueAssociateIpAddress.php');
-include_once('SetEnqueueAssociateIpAddressResponse.php');
-include_once('SetEnqueueDeassociateIpAddress.php');
-include_once('SetEnqueueDeassociateIpAddressResponse.php');
-include_once('SetPurchaseVLan.php');
-include_once('SetPurchaseVLanResponse.php');
-include_once('SetRemoveVLan.php');
-include_once('SetRemoveVLanResponse.php');
-include_once('SetRenameVLan.php');
-include_once('SetRenameVLanResponse.php');
 
 
 /**
@@ -204,6 +235,26 @@ class WsEndUser extends SoapClient
    * @access private
    */
   protected static $classmap = array(
+    'SetRemoveVLan' => 'SetRemoveVLan',
+    'SetRemoveVLanResponse' => 'SetRemoveVLanResponse',
+    'SetRenameVLan' => 'SetRenameVLan',
+    'SetRenameVLanResponse' => 'SetRenameVLanResponse',
+    'SetEnqueueAssociateVLan' => 'SetEnqueueAssociateVLan',
+    'SetEnqueueAssociateVLanResponse' => 'SetEnqueueAssociateVLanResponse',
+    'SetEnqueueDeassociateVLan' => 'SetEnqueueDeassociateVLan',
+    'SetEnqueueDeassociateVLanResponse' => 'SetEnqueueDeassociateVLanResponse',
+    'SetEnqueueCreateFTPAccount' => 'SetEnqueueCreateFTPAccount',
+    'SetEnqueueCreateFTPAccountResponse' => 'SetEnqueueCreateFTPAccountResponse',
+    'SetEnqueueResizeFTPAccount' => 'SetEnqueueResizeFTPAccount',
+    'SetEnqueueResizeFTPAccountResponse' => 'SetEnqueueResizeFTPAccountResponse',
+    'SetReadNews' => 'SetReadNews',
+    'SetReadNewsResponse' => 'SetReadNewsResponse',
+    'GetVDCGraph' => 'GetVDCGraph',
+    'GetVDCGraphResponse' => 'GetVDCGraphResponse',
+    'SetAddVDCGraph' => 'SetAddVDCGraph',
+    'SetAddVDCGraphResponse' => 'SetAddVDCGraphResponse',
+    'SetUpdateVDCGraph' => 'SetUpdateVDCGraph',
+    'SetUpdateVDCGraphResponse' => 'SetUpdateVDCGraphResponse',
     'GetUserAuthenticationToken' => 'GetUserAuthenticationToken',
     'GetUserAuthenticationTokenResponse' => 'GetUserAuthenticationTokenResponse',
     'GetAllServers' => 'GetAllServers',
@@ -234,7 +285,63 @@ class WsEndUser extends SoapClient
     'GetVirtualDatacenterCostResponse' => 'GetVirtualDatacenterCostResponse',
     'GetDatacenterConfigurations' => 'GetDatacenterConfigurations',
     'GetDatacenterConfigurationsResponse' => 'GetDatacenterConfigurationsResponse',
-    'ExceptionInfo' => 'ExceptionInfo',
+    'GetCompanyByUrl' => 'GetCompanyByUrl',
+    'GetCompanyByUrlResponse' => 'GetCompanyByUrlResponse',
+    'GetHypervisors' => 'GetHypervisors',
+    'GetHypervisorsResponse' => 'GetHypervisorsResponse',
+    'GetPurchasedVLans' => 'GetPurchasedVLans',
+    'GetPurchasedVLansResponse' => 'GetPurchasedVLansResponse',
+    'GetPurchasedIpAddresses' => 'GetPurchasedIpAddresses',
+    'GetPurchasedIpAddressesResponse' => 'GetPurchasedIpAddressesResponse',
+    'GetJobs' => 'GetJobs',
+    'GetJobsResponse' => 'GetJobsResponse',
+    'GetAllLogs' => 'GetAllLogs',
+    'GetAllLogsResponse' => 'GetAllLogsResponse',
+    'GetLogs' => 'GetLogs',
+    'GetLogsResponse' => 'GetLogsResponse',
+    'GetCustomVirtualDisks' => 'GetCustomVirtualDisks',
+    'GetCustomVirtualDisksResponse' => 'GetCustomVirtualDisksResponse',
+    'GetIsos' => 'GetIsos',
+    'GetIsosResponse' => 'GetIsosResponse',
+    'GetUserInfo' => 'GetUserInfo',
+    'GetUserInfoResponse' => 'GetUserInfoResponse',
+    'GetPurchasedFTP' => 'GetPurchasedFTP',
+    'GetPurchasedFTPResponse' => 'GetPurchasedFTPResponse',
+    'GetNews' => 'GetNews',
+    'GetNewsResponse' => 'GetNewsResponse',
+    'SetEnqueueServerDeletion' => 'SetEnqueueServerDeletion',
+    'SetEnqueueServerDeletionResponse' => 'SetEnqueueServerDeletionResponse',
+    'SetEnqueueServerRestart' => 'SetEnqueueServerRestart',
+    'SetEnqueueServerRestartResponse' => 'SetEnqueueServerRestartResponse',
+    'SetEnqueueServerArchiviation' => 'SetEnqueueServerArchiviation',
+    'SetEnqueueServerArchiviationResponse' => 'SetEnqueueServerArchiviationResponse',
+    'SetEnqueueServerRestore' => 'SetEnqueueServerRestore',
+    'SetEnqueueServerRestoreResponse' => 'SetEnqueueServerRestoreResponse',
+    'SetRenameServer' => 'SetRenameServer',
+    'SetRenameServerResponse' => 'SetRenameServerResponse',
+    'SetEnqueueMountDvdIso' => 'SetEnqueueMountDvdIso',
+    'SetEnqueueMountDvdIsoResponse' => 'SetEnqueueMountDvdIsoResponse',
+    'SetEnqueueUnmountDvdIso' => 'SetEnqueueUnmountDvdIso',
+    'SetEnqueueUnmountDvdIsoResponse' => 'SetEnqueueUnmountDvdIsoResponse',
+    'SetEnqueueVirtualDiskManage' => 'SetEnqueueVirtualDiskManage',
+    'SetEnqueueVirtualDiskManageResponse' => 'SetEnqueueVirtualDiskManageResponse',
+    'SetEnqueueHardwareUpdate' => 'SetEnqueueHardwareUpdate',
+    'SetEnqueueHardwareUpdateResponse' => 'SetEnqueueHardwareUpdateResponse',
+    'SetChangeNoteServer' => 'SetChangeNoteServer',
+    'SetChangeNoteServerResponse' => 'SetChangeNoteServerResponse',
+    'SetPurchaseIpAddress' => 'SetPurchaseIpAddress',
+    'SetPurchaseIpAddressResponse' => 'SetPurchaseIpAddressResponse',
+    'SetRemoveIpAddress' => 'SetRemoveIpAddress',
+    'SetRemoveIpAddressResponse' => 'SetRemoveIpAddressResponse',
+    'SetEnqueueAssociateIpAddress' => 'SetEnqueueAssociateIpAddress',
+    'SetEnqueueAssociateIpAddressResponse' => 'SetEnqueueAssociateIpAddressResponse',
+    'SetEnqueueDeassociateIpAddress' => 'SetEnqueueDeassociateIpAddress',
+    'SetEnqueueDeassociateIpAddressResponse' => 'SetEnqueueDeassociateIpAddressResponse',
+    'SetPurchaseVLan' => 'SetPurchaseVLan',
+    'SetPurchaseVLanResponse' => 'SetPurchaseVLanResponse',
+    'VLan' => 'VLan',
+    'CloudEntity' => 'CloudEntity',
+    'ScheduledOperationRequest' => 'ScheduledOperationRequest',
     'UserToken' => 'UserToken',
     'Company' => 'Company',
     'Hypervisor' => 'Hypervisor',
@@ -244,22 +351,26 @@ class WsEndUser extends SoapClient
     'FTP' => 'FTP',
     'FTPServer' => 'FTPServer',
     'IPAddress' => 'IPAddress',
-    'CloudEntity' => 'CloudEntity',
+    'PleskLicense' => 'PleskLicense',
+    'PurchasedAddonLicense' => 'PurchasedAddonLicense',
+    'LicenseKey' => 'LicenseKey',
     'ServerDetails' => 'ServerDetails',
     'Job' => 'Job',
     'Cpu' => 'Cpu',
     'NetworkAdapter' => 'NetworkAdapter',
-    'VLan' => 'VLan',
     'Template' => 'Template',
     'KeyValuePair' => 'KeyValuePair',
     'Ram' => 'Ram',
+    'ScheduledOperation' => 'ScheduledOperation',
     'Snapshot' => 'Snapshot',
     'VirtualDVD' => 'VirtualDVD',
     'VirtualDisk' => 'VirtualDisk',
     'VirtualDatacenterCost' => 'VirtualDatacenterCost',
     'AggregateCost' => 'AggregateCost',
-    'IpAddressCost' => 'IpAddressCost',
+    'FTPCost' => 'FTPCost',
     'ResourceCost' => 'ResourceCost',
+    'IpAddressCost' => 'IpAddressCost',
+    'PleskLicenseCost' => 'PleskLicenseCost',
     'ServerCost' => 'ServerCost',
     'VirtualDiskCost' => 'VirtualDiskCost',
     'Server' => 'Server',
@@ -272,6 +383,9 @@ class WsEndUser extends SoapClient
     'CustomVirtualDisk' => 'CustomVirtualDisk',
     'IsoDetails' => 'IsoDetails',
     'UserInfo' => 'UserInfo',
+    'Permission' => 'Permission',
+    'News' => 'News',
+    'ScheduleLog' => 'ScheduleLog',
     'NewServer' => 'NewServer',
     'NetworkAdapterConfiguration' => 'NetworkAdapterConfiguration',
     'PrivateVLanDetails' => 'PrivateVLanDetails',
@@ -282,9 +396,11 @@ class WsEndUser extends SoapClient
     'ServerRestore' => 'ServerRestore',
     'NewIso' => 'NewIso',
     'ExportVirtualDisk' => 'ExportVirtualDisk',
+    'ExceptionInfo' => 'ExceptionInfo',
     'CompanySettings' => 'CompanySettings',
     'CompanyDataCenterSettings' => 'CompanyDataCenterSettings',
     'CompanySupportSettings' => 'CompanySupportSettings',
+    'WsResultOfVLan' => 'WsResultOfVLan',
     'WsResult' => 'WsResult',
     'WsResultOfstring' => 'WsResultOfstring',
     'WsResultOfUserToken' => 'WsResultOfUserToken',
@@ -305,8 +421,16 @@ class WsEndUser extends SoapClient
     'WsResultOfArrayOfIsoDetails' => 'WsResultOfArrayOfIsoDetails',
     'WsResultOfUserInfo' => 'WsResultOfUserInfo',
     'WsResultOfFTP' => 'WsResultOfFTP',
+    'WsResultOfArrayOfNews' => 'WsResultOfArrayOfNews',
+    'WsResultOfArrayOfScheduledOperation' => 'WsResultOfArrayOfScheduledOperation',
+    'WsResultOfArrayOfScheduleLog' => 'WsResultOfArrayOfScheduleLog',
     'WsResultOfIPAddress' => 'WsResultOfIPAddress',
-    'WsResultOfVLan' => 'WsResultOfVLan',
+    'SetPurchaseVLan' => 'SetPurchaseVLan',
+    'SetPurchaseVLanResponse' => 'SetPurchaseVLanResponse',
+    'SetRemoveVLan' => 'SetRemoveVLan',
+    'SetRemoveVLanResponse' => 'SetRemoveVLanResponse',
+    'SetRenameVLan' => 'SetRenameVLan',
+    'SetRenameVLanResponse' => 'SetRenameVLanResponse',
     'SetEnqueueAssociateVLan' => 'SetEnqueueAssociateVLan',
     'SetEnqueueAssociateVLanResponse' => 'SetEnqueueAssociateVLanResponse',
     'SetEnqueueDeassociateVLan' => 'SetEnqueueDeassociateVLan',
@@ -315,6 +439,14 @@ class WsEndUser extends SoapClient
     'SetEnqueueCreateFTPAccountResponse' => 'SetEnqueueCreateFTPAccountResponse',
     'SetEnqueueResizeFTPAccount' => 'SetEnqueueResizeFTPAccount',
     'SetEnqueueResizeFTPAccountResponse' => 'SetEnqueueResizeFTPAccountResponse',
+    'SetReadNews' => 'SetReadNews',
+    'SetReadNewsResponse' => 'SetReadNewsResponse',
+    'SetAddServerScheduledOperation' => 'SetAddServerScheduledOperation',
+    'SetAddServerScheduledOperationResponse' => 'SetAddServerScheduledOperationResponse',
+    'SetUpdateServerScheduledOperation' => 'SetUpdateServerScheduledOperation',
+    'SetUpdateServerScheduledOperationResponse' => 'SetUpdateServerScheduledOperationResponse',
+    'SetRemoveServerScheduledOperation' => 'SetRemoveServerScheduledOperation',
+    'SetRemoveServerScheduledOperationResponse' => 'SetRemoveServerScheduledOperationResponse',
     'GetVDCGraph' => 'GetVDCGraph',
     'GetVDCGraphResponse' => 'GetVDCGraphResponse',
     'SetAddVDCGraph' => 'SetAddVDCGraph',
@@ -332,7 +464,9 @@ class WsEndUser extends SoapClient
     'GetVirtualDatacenterCost' => 'GetVirtualDatacenterCost',
     'GetVirtualDatacenterCostResponse' => 'GetVirtualDatacenterCostResponse',
     'GetServers' => 'GetServers',
-    'GetServersResponse' => 'GetServersResponse',    
+    'GetServersResponse' => 'GetServersResponse',
+    'GetServerDetails' => 'GetServerDetails',
+    'GetServerDetailsResponse' => 'GetServerDetailsResponse',
     'GetCredit' => 'GetCredit',
     'GetCreditResponse' => 'GetCreditResponse',
     'GetPriceList' => 'GetPriceList',
@@ -355,6 +489,12 @@ class WsEndUser extends SoapClient
     'GetUserInfoResponse' => 'GetUserInfoResponse',
     'GetPurchasedFTP' => 'GetPurchasedFTP',
     'GetPurchasedFTPResponse' => 'GetPurchasedFTPResponse',
+    'GetNews' => 'GetNews',
+    'GetNewsResponse' => 'GetNewsResponse',
+    'GetScheduledOperations' => 'GetScheduledOperations',
+    'GetScheduledOperationsResponse' => 'GetScheduledOperationsResponse',
+    'GetServerSchedulesLogs' => 'GetServerSchedulesLogs',
+    'GetServerSchedulesLogsResponse' => 'GetServerSchedulesLogsResponse',
     'SetEnqueueServerCreation' => 'SetEnqueueServerCreation',
     'SetEnqueueServerCreationResponse' => 'SetEnqueueServerCreationResponse',
     'SetEnqueueServerUpdate' => 'SetEnqueueServerUpdate',
@@ -396,13 +536,7 @@ class WsEndUser extends SoapClient
     'SetEnqueueAssociateIpAddress' => 'SetEnqueueAssociateIpAddress',
     'SetEnqueueAssociateIpAddressResponse' => 'SetEnqueueAssociateIpAddressResponse',
     'SetEnqueueDeassociateIpAddress' => 'SetEnqueueDeassociateIpAddress',
-    'SetEnqueueDeassociateIpAddressResponse' => 'SetEnqueueDeassociateIpAddressResponse',
-    'SetPurchaseVLan' => 'SetPurchaseVLan',
-    'SetPurchaseVLanResponse' => 'SetPurchaseVLanResponse',
-    'SetRemoveVLan' => 'SetRemoveVLan',
-    'SetRemoveVLanResponse' => 'SetRemoveVLanResponse',
-    'SetRenameVLan' => 'SetRenameVLan',
-    'SetRenameVLanResponse' => 'SetRenameVLanResponse');
+    'SetEnqueueDeassociateIpAddressResponse' => 'SetEnqueueDeassociateIpAddressResponse');
 
   /**
    * 
@@ -410,7 +544,7 @@ class WsEndUser extends SoapClient
    * @param string $wsdl The wsdl file to use
    * @access public
    */
-  public function __construct(array $options = array(), $wsdl = 'wsEndUser14.wsdl')
+  public function __construct(array $options = array(), $wsdl = 'wsEndUser19.wsdl')
   {
     foreach(self::$classmap as $key => $value)
     {
@@ -421,6 +555,36 @@ class WsEndUser extends SoapClient
     }
     
     parent::__construct($wsdl, $options);
+  }
+
+  /**
+   * 
+   * @param SetPurchaseVLan $parameters
+   * @access public
+   */
+  public function SetPurchaseVLan(SetPurchaseVLan $parameters)
+  {
+    return $this->__soapCall('SetPurchaseVLan', array($parameters));
+  }
+
+  /**
+   * 
+   * @param SetRemoveVLan $parameters
+   * @access public
+   */
+  public function SetRemoveVLan(SetRemoveVLan $parameters)
+  {
+    return $this->__soapCall('SetRemoveVLan', array($parameters));
+  }
+
+  /**
+   * 
+   * @param SetRenameVLan $parameters
+   * @access public
+   */
+  public function SetRenameVLan(SetRenameVLan $parameters)
+  {
+    return $this->__soapCall('SetRenameVLan', array($parameters));
   }
 
   /**
@@ -461,6 +625,46 @@ class WsEndUser extends SoapClient
   public function SetEnqueueResizeFTPAccount(SetEnqueueResizeFTPAccount $parameters)
   {
     return $this->__soapCall('SetEnqueueResizeFTPAccount', array($parameters));
+  }
+
+  /**
+   * 
+   * @param SetReadNews $parameters
+   * @access public
+   */
+  public function SetReadNews(SetReadNews $parameters)
+  {
+    return $this->__soapCall('SetReadNews', array($parameters));
+  }
+
+  /**
+   * 
+   * @param SetAddServerScheduledOperation $parameters
+   * @access public
+   */
+  public function SetAddServerScheduledOperation(SetAddServerScheduledOperation $parameters)
+  {
+    return $this->__soapCall('SetAddServerScheduledOperation', array($parameters));
+  }
+
+  /**
+   * 
+   * @param SetUpdateServerScheduledOperation $parameters
+   * @access public
+   */
+  public function SetUpdateServerScheduledOperation(SetUpdateServerScheduledOperation $parameters)
+  {
+    return $this->__soapCall('SetUpdateServerScheduledOperation', array($parameters));
+  }
+
+  /**
+   * 
+   * @param SetRemoveServerScheduledOperation $parameters
+   * @access public
+   */
+  public function SetRemoveServerScheduledOperation(SetRemoveServerScheduledOperation $parameters)
+  {
+    return $this->__soapCall('SetRemoveServerScheduledOperation', array($parameters));
   }
 
   /**
@@ -520,8 +724,7 @@ class WsEndUser extends SoapClient
    */
   public function GetHypervisors(GetHypervisors $parameters)
   {
-    $result = $this->__soapCall('GetHypervisors', array($parameters));
-    return $result;
+    return $this->__soapCall('GetHypervisors', array($parameters));
   }
 
   /**
@@ -672,6 +875,36 @@ class WsEndUser extends SoapClient
   public function GetPurchasedFTP(GetPurchasedFTP $parameters)
   {
     return $this->__soapCall('GetPurchasedFTP', array($parameters));
+  }
+
+  /**
+   * 
+   * @param GetNews $parameters
+   * @access public
+   */
+  public function GetNews(GetNews $parameters)
+  {
+    return $this->__soapCall('GetNews', array($parameters));
+  }
+
+  /**
+   * 
+   * @param GetScheduledOperations $parameters
+   * @access public
+   */
+  public function GetScheduledOperations(GetScheduledOperations $parameters)
+  {
+    return $this->__soapCall('GetScheduledOperations', array($parameters));
+  }
+
+  /**
+   * 
+   * @param GetServerSchedulesLogs $parameters
+   * @access public
+   */
+  public function GetServerSchedulesLogs(GetServerSchedulesLogs $parameters)
+  {
+    return $this->__soapCall('GetServerSchedulesLogs', array($parameters));
   }
 
   /**
@@ -884,35 +1117,4 @@ class WsEndUser extends SoapClient
     return $this->__soapCall('SetEnqueueDeassociateIpAddress', array($parameters));
   }
 
-  /**
-   * 
-   * @param SetPurchaseVLan $parameters
-   * @access public
-   */
-  public function SetPurchaseVLan(SetPurchaseVLan $parameters)
-  {
-    return $this->__soapCall('SetPurchaseVLan', array($parameters));
-  }
-
-  /**
-   * 
-   * @param SetRemoveVLan $parameters
-   * @access public
-   */
-  public function SetRemoveVLan(SetRemoveVLan $parameters)
-  {
-    return $this->__soapCall('SetRemoveVLan', array($parameters));
-  }
-
-  /**
-   * 
-   * @param SetRenameVLan $parameters
-   * @access public
-   */
-  public function SetRenameVLan(SetRenameVLan $parameters)
-  {
-    return $this->__soapCall('SetRenameVLan', array($parameters));
-  }
-
 }
-?>
