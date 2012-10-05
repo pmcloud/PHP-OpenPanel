@@ -47,12 +47,6 @@ class VDCResourceBoundsConfig {
 		} 
 	}
 	
-//	final function hypSort($v1) {
-//		if ($v1 != null) {
-//			print "aaa";
-//		}
-//		return null;	
-//	}
 	
 	public final function getRegisteredHypervisorTypes() {
 		//return array_keys($this->hypervisorTemplates);

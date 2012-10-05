@@ -16,11 +16,12 @@
  * IN THE SOFTWARE.
  * 
  */
+
 interface WSEndpoint {
 		
 	const DEF_WS_URL 	= "https://api.dc1.computing.cloud.it";
 	
-	const DEF_ENDUSER_API_VERSION	= "v1.4";
+	const DEF_ENDUSER_API_VERSION	= "v2.0";
 		
 	const SESSION_DATA = "SESSION_DATA";
 }

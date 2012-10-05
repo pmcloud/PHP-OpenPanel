@@ -36,10 +36,24 @@ class Price
 
   /**
    * 
+   * @var dateTime $InsertDate
+   * @access public
+   */
+  public $InsertDate;
+
+  /**
+   * 
    * @var array $Modifiers
    * @access public
    */
   public $Modifiers;
+
+  /**
+   * 
+   * @var PriceListElementStatus $PriceListElementStatus
+   * @access public
+   */
+  public $PriceListElementStatus;
 
   /**
    * 
@@ -73,18 +87,22 @@ class Price
    * 
    * @param BillingTypes $BillingType
    * @param HypervisorTypes $HypervisorType
+   * @param dateTime $InsertDate
    * @param array $Modifiers
+   * @param PriceListElementStatus $PriceListElementStatus
    * @param int $ProductID
    * @param ResourceTypes $ResourceType
    * @param int $TimeUnitInHours
    * @param float $Value
    * @access public
    */
-  public function __construct($BillingType, $HypervisorType, $Modifiers, $ProductID, $ResourceType, $TimeUnitInHours, $Value)
+  public function __construct($BillingType, $HypervisorType, $Modifiers, $ProductID, $ResourceType, $TimeUnitInHours, $Value, $InsertDate=null, $PriceListElementStatus=null)
   {
     $this->BillingType = $BillingType;
     $this->HypervisorType = $HypervisorType;
+    $this->InsertDate = $InsertDate;
     $this->Modifiers = $Modifiers;
+    $this->PriceListElementStatus = $PriceListElementStatus;
     $this->ProductID = $ProductID;
     $this->ResourceType = $ResourceType;
     $this->TimeUnitInHours = $TimeUnitInHours;

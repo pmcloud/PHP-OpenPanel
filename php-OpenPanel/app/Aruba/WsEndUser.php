@@ -37,6 +37,14 @@ include_once('SetAddVDCGraph.php');
 include_once('SetAddVDCGraphResponse.php');
 include_once('SetUpdateVDCGraph.php');
 include_once('SetUpdateVDCGraphResponse.php');
+include_once('GetTemplateDetails.php');
+include_once('GetTemplateDetailsResponse.php');
+include_once('GetTemplateCategories.php');
+include_once('GetTemplateCategoriesResponse.php');
+include_once('GetAvailablePersonalTemplates.php');
+include_once('GetAvailablePersonalTemplatesResponse.php');
+include_once('SetRemovePersonalTemplate.php');
+include_once('SetRemovePersonalTemplateResponse.php');
 include_once('GetUserAuthenticationToken.php');
 include_once('GetUserAuthenticationTokenResponse.php');
 include_once('GetAllServers.php');
@@ -121,9 +129,13 @@ include_once('SetEnqueueDeassociateIpAddress.php');
 include_once('SetEnqueueDeassociateIpAddressResponse.php');
 include_once('SetPurchaseVLan.php');
 include_once('SetPurchaseVLanResponse.php');
-include_once('VLan.php');
+include_once('IPAddress.php');
 include_once('CloudEntity.php');
+include_once('VLan.php');
 include_once('ScheduledOperationRequest.php');
+include_once('UpdatePersonalTemplate.php');
+include_once('TemplateBound.php');
+include_once('NewTemplateBound.php');
 include_once('UserToken.php');
 include_once('Company.php');
 include_once('Hypervisor.php');
@@ -132,7 +144,6 @@ include_once('ResourceBound.php');
 include_once('VirtualDatacenter.php');
 include_once('FTP.php');
 include_once('FTPServer.php');
-include_once('IPAddress.php');
 include_once('PleskLicense.php');
 include_once('PurchasedAddonLicense.php');
 include_once('LicenseKey.php');
@@ -168,6 +179,15 @@ include_once('UserInfo.php');
 include_once('Permission.php');
 include_once('News.php');
 include_once('ScheduleLog.php');
+include_once('TemplateCategories.php');
+include_once('ApplianceType.php');
+include_once('ArchitectureType.php');
+include_once('FeatureType.php');
+include_once('HypervisorTemplateBounds.php');
+include_once('OperatingSystemFamily.php');
+include_once('TemplateType.php');
+include_once('PersonalTemplate.php');
+include_once('TemplateFeature.php');
 include_once('NewServer.php');
 include_once('NetworkAdapterConfiguration.php');
 include_once('PrivateVLanDetails.php');
@@ -178,12 +198,14 @@ include_once('VirtualDiskUpdate.php');
 include_once('ServerRestore.php');
 include_once('NewIso.php');
 include_once('ExportVirtualDisk.php');
+include_once('NewPersonalTemplate.php');
 include_once('ExceptionInfo.php');
 include_once('CompanySettings.php');
 include_once('CompanyDataCenterSettings.php');
 include_once('CompanySupportSettings.php');
-include_once('WsResultOfVLan.php');
+include_once('WsResultOfIPAddress.php');
 include_once('WsResult.php');
+include_once('WsResultOfVLan.php');
 include_once('WsResultOfstring.php');
 include_once('WsResultOfUserToken.php');
 include_once('WsResultOfCompanySettings.php');
@@ -206,13 +228,17 @@ include_once('WsResultOfFTP.php');
 include_once('WsResultOfArrayOfNews.php');
 include_once('WsResultOfArrayOfScheduledOperation.php');
 include_once('WsResultOfArrayOfScheduleLog.php');
-include_once('WsResultOfIPAddress.php');
+include_once('WsResultOfTemplateDetails.php');
+include_once('WsResultOfTemplateCategories.php');
+include_once('WsResultOfArrayOfPersonalTemplate.php');
 include_once('SetAddServerScheduledOperation.php');
 include_once('SetAddServerScheduledOperationResponse.php');
 include_once('SetUpdateServerScheduledOperation.php');
 include_once('SetUpdateServerScheduledOperationResponse.php');
 include_once('SetRemoveServerScheduledOperation.php');
 include_once('SetRemoveServerScheduledOperationResponse.php');
+include_once('SetUpdatePersonalTemplate.php');
+include_once('SetUpdatePersonalTemplateResponse.php');
 include_once('GetScheduledOperations.php');
 include_once('GetScheduledOperationsResponse.php');
 include_once('GetServerSchedulesLogs.php');
@@ -221,6 +247,8 @@ include_once('SetEnqueueServerCreation.php');
 include_once('SetEnqueueServerCreationResponse.php');
 include_once('SetEnqueueServerUpdate.php');
 include_once('SetEnqueueServerUpdateResponse.php');
+include_once('SetEnqueuePersonalTemplateCreation.php');
+include_once('SetEnqueuePersonalTemplateCreationResponse.php');
 
 
 /**
@@ -255,6 +283,14 @@ class WsEndUser extends SoapClient
     'SetAddVDCGraphResponse' => 'SetAddVDCGraphResponse',
     'SetUpdateVDCGraph' => 'SetUpdateVDCGraph',
     'SetUpdateVDCGraphResponse' => 'SetUpdateVDCGraphResponse',
+    'GetTemplateDetails' => 'GetTemplateDetails',
+    'GetTemplateDetailsResponse' => 'GetTemplateDetailsResponse',
+    'GetTemplateCategories' => 'GetTemplateCategories',
+    'GetTemplateCategoriesResponse' => 'GetTemplateCategoriesResponse',
+    'GetAvailablePersonalTemplates' => 'GetAvailablePersonalTemplates',
+    'GetAvailablePersonalTemplatesResponse' => 'GetAvailablePersonalTemplatesResponse',
+    'SetRemovePersonalTemplate' => 'SetRemovePersonalTemplate',
+    'SetRemovePersonalTemplateResponse' => 'SetRemovePersonalTemplateResponse',
     'GetUserAuthenticationToken' => 'GetUserAuthenticationToken',
     'GetUserAuthenticationTokenResponse' => 'GetUserAuthenticationTokenResponse',
     'GetAllServers' => 'GetAllServers',
@@ -339,9 +375,13 @@ class WsEndUser extends SoapClient
     'SetEnqueueDeassociateIpAddressResponse' => 'SetEnqueueDeassociateIpAddressResponse',
     'SetPurchaseVLan' => 'SetPurchaseVLan',
     'SetPurchaseVLanResponse' => 'SetPurchaseVLanResponse',
-    'VLan' => 'VLan',
+    'IPAddress' => 'IPAddress',
     'CloudEntity' => 'CloudEntity',
+    'VLan' => 'VLan',
     'ScheduledOperationRequest' => 'ScheduledOperationRequest',
+    'UpdatePersonalTemplate' => 'UpdatePersonalTemplate',
+    'TemplateBound' => 'TemplateBound',
+    'NewTemplateBound' => 'NewTemplateBound',
     'UserToken' => 'UserToken',
     'Company' => 'Company',
     'Hypervisor' => 'Hypervisor',
@@ -350,7 +390,6 @@ class WsEndUser extends SoapClient
     'VirtualDatacenter' => 'VirtualDatacenter',
     'FTP' => 'FTP',
     'FTPServer' => 'FTPServer',
-    'IPAddress' => 'IPAddress',
     'PleskLicense' => 'PleskLicense',
     'PurchasedAddonLicense' => 'PurchasedAddonLicense',
     'LicenseKey' => 'LicenseKey',
@@ -386,6 +425,15 @@ class WsEndUser extends SoapClient
     'Permission' => 'Permission',
     'News' => 'News',
     'ScheduleLog' => 'ScheduleLog',
+    'TemplateCategories' => 'TemplateCategories',
+    'ApplianceType' => 'ApplianceType',
+    'ArchitectureType' => 'ArchitectureType',
+    'FeatureType' => 'FeatureType',
+    'HypervisorTemplateBounds' => 'HypervisorTemplateBounds',
+    'OperatingSystemFamily' => 'OperatingSystemFamily',
+    'TemplateType' => 'TemplateType',
+    'PersonalTemplate' => 'PersonalTemplate',
+    'TemplateFeature' => 'TemplateFeature',
     'NewServer' => 'NewServer',
     'NetworkAdapterConfiguration' => 'NetworkAdapterConfiguration',
     'PrivateVLanDetails' => 'PrivateVLanDetails',
@@ -396,12 +444,14 @@ class WsEndUser extends SoapClient
     'ServerRestore' => 'ServerRestore',
     'NewIso' => 'NewIso',
     'ExportVirtualDisk' => 'ExportVirtualDisk',
+    'NewPersonalTemplate' => 'NewPersonalTemplate',
     'ExceptionInfo' => 'ExceptionInfo',
     'CompanySettings' => 'CompanySettings',
     'CompanyDataCenterSettings' => 'CompanyDataCenterSettings',
     'CompanySupportSettings' => 'CompanySupportSettings',
-    'WsResultOfVLan' => 'WsResultOfVLan',
+    'WsResultOfIPAddress' => 'WsResultOfIPAddress',
     'WsResult' => 'WsResult',
+    'WsResultOfVLan' => 'WsResultOfVLan',
     'WsResultOfstring' => 'WsResultOfstring',
     'WsResultOfUserToken' => 'WsResultOfUserToken',
     'WsResultOfCompanySettings' => 'WsResultOfCompanySettings',
@@ -424,7 +474,17 @@ class WsEndUser extends SoapClient
     'WsResultOfArrayOfNews' => 'WsResultOfArrayOfNews',
     'WsResultOfArrayOfScheduledOperation' => 'WsResultOfArrayOfScheduledOperation',
     'WsResultOfArrayOfScheduleLog' => 'WsResultOfArrayOfScheduleLog',
-    'WsResultOfIPAddress' => 'WsResultOfIPAddress',
+    'WsResultOfTemplateDetails' => 'WsResultOfTemplateDetails',
+    'WsResultOfTemplateCategories' => 'WsResultOfTemplateCategories',
+    'WsResultOfArrayOfPersonalTemplate' => 'WsResultOfArrayOfPersonalTemplate',
+    'SetPurchaseIpAddress' => 'SetPurchaseIpAddress',
+    'SetPurchaseIpAddressResponse' => 'SetPurchaseIpAddressResponse',
+    'SetRemoveIpAddress' => 'SetRemoveIpAddress',
+    'SetRemoveIpAddressResponse' => 'SetRemoveIpAddressResponse',
+    'SetEnqueueAssociateIpAddress' => 'SetEnqueueAssociateIpAddress',
+    'SetEnqueueAssociateIpAddressResponse' => 'SetEnqueueAssociateIpAddressResponse',
+    'SetEnqueueDeassociateIpAddress' => 'SetEnqueueDeassociateIpAddress',
+    'SetEnqueueDeassociateIpAddressResponse' => 'SetEnqueueDeassociateIpAddressResponse',
     'SetPurchaseVLan' => 'SetPurchaseVLan',
     'SetPurchaseVLanResponse' => 'SetPurchaseVLanResponse',
     'SetRemoveVLan' => 'SetRemoveVLan',
@@ -447,6 +507,10 @@ class WsEndUser extends SoapClient
     'SetUpdateServerScheduledOperationResponse' => 'SetUpdateServerScheduledOperationResponse',
     'SetRemoveServerScheduledOperation' => 'SetRemoveServerScheduledOperation',
     'SetRemoveServerScheduledOperationResponse' => 'SetRemoveServerScheduledOperationResponse',
+    'SetUpdatePersonalTemplate' => 'SetUpdatePersonalTemplate',
+    'SetUpdatePersonalTemplateResponse' => 'SetUpdatePersonalTemplateResponse',
+    'SetRemovePersonalTemplate' => 'SetRemovePersonalTemplate',
+    'SetRemovePersonalTemplateResponse' => 'SetRemovePersonalTemplateResponse',
     'GetVDCGraph' => 'GetVDCGraph',
     'GetVDCGraphResponse' => 'GetVDCGraphResponse',
     'SetAddVDCGraph' => 'SetAddVDCGraph',
@@ -495,6 +559,12 @@ class WsEndUser extends SoapClient
     'GetScheduledOperationsResponse' => 'GetScheduledOperationsResponse',
     'GetServerSchedulesLogs' => 'GetServerSchedulesLogs',
     'GetServerSchedulesLogsResponse' => 'GetServerSchedulesLogsResponse',
+    'GetTemplateDetails' => 'GetTemplateDetails',
+    'GetTemplateDetailsResponse' => 'GetTemplateDetailsResponse',
+    'GetTemplateCategories' => 'GetTemplateCategories',
+    'GetTemplateCategoriesResponse' => 'GetTemplateCategoriesResponse',
+    'GetAvailablePersonalTemplates' => 'GetAvailablePersonalTemplates',
+    'GetAvailablePersonalTemplatesResponse' => 'GetAvailablePersonalTemplatesResponse',
     'SetEnqueueServerCreation' => 'SetEnqueueServerCreation',
     'SetEnqueueServerCreationResponse' => 'SetEnqueueServerCreationResponse',
     'SetEnqueueServerUpdate' => 'SetEnqueueServerUpdate',
@@ -527,16 +597,10 @@ class WsEndUser extends SoapClient
     'SetEnqueueVirtualDiskManageResponse' => 'SetEnqueueVirtualDiskManageResponse',
     'SetEnqueueServerSnapshot' => 'SetEnqueueServerSnapshot',
     'SetEnqueueServerSnapshotResponse' => 'SetEnqueueServerSnapshotResponse',
+    'SetEnqueuePersonalTemplateCreation' => 'SetEnqueuePersonalTemplateCreation',
+    'SetEnqueuePersonalTemplateCreationResponse' => 'SetEnqueuePersonalTemplateCreationResponse',
     'SetChangeNoteServer' => 'SetChangeNoteServer',
-    'SetChangeNoteServerResponse' => 'SetChangeNoteServerResponse',
-    'SetPurchaseIpAddress' => 'SetPurchaseIpAddress',
-    'SetPurchaseIpAddressResponse' => 'SetPurchaseIpAddressResponse',
-    'SetRemoveIpAddress' => 'SetRemoveIpAddress',
-    'SetRemoveIpAddressResponse' => 'SetRemoveIpAddressResponse',
-    'SetEnqueueAssociateIpAddress' => 'SetEnqueueAssociateIpAddress',
-    'SetEnqueueAssociateIpAddressResponse' => 'SetEnqueueAssociateIpAddressResponse',
-    'SetEnqueueDeassociateIpAddress' => 'SetEnqueueDeassociateIpAddress',
-    'SetEnqueueDeassociateIpAddressResponse' => 'SetEnqueueDeassociateIpAddressResponse');
+    'SetChangeNoteServerResponse' => 'SetChangeNoteServerResponse');
 
   /**
    * 
@@ -544,7 +608,7 @@ class WsEndUser extends SoapClient
    * @param string $wsdl The wsdl file to use
    * @access public
    */
-  public function __construct(array $options = array(), $wsdl = 'wsEndUser19.wsdl')
+  public function __construct(array $options = array(), $wsdl = 'wsEndUser-v20.wsdl')
   {
     foreach(self::$classmap as $key => $value)
     {
@@ -555,6 +619,46 @@ class WsEndUser extends SoapClient
     }
     
     parent::__construct($wsdl, $options);
+  }
+
+  /**
+   * 
+   * @param SetPurchaseIpAddress $parameters
+   * @access public
+   */
+  public function SetPurchaseIpAddress(SetPurchaseIpAddress $parameters)
+  {
+    return $this->__soapCall('SetPurchaseIpAddress', array($parameters));
+  }
+
+  /**
+   * 
+   * @param SetRemoveIpAddress $parameters
+   * @access public
+   */
+  public function SetRemoveIpAddress(SetRemoveIpAddress $parameters)
+  {
+    return $this->__soapCall('SetRemoveIpAddress', array($parameters));
+  }
+
+  /**
+   * 
+   * @param SetEnqueueAssociateIpAddress $parameters
+   * @access public
+   */
+  public function SetEnqueueAssociateIpAddress(SetEnqueueAssociateIpAddress $parameters)
+  {
+    return $this->__soapCall('SetEnqueueAssociateIpAddress', array($parameters));
+  }
+
+  /**
+   * 
+   * @param SetEnqueueDeassociateIpAddress $parameters
+   * @access public
+   */
+  public function SetEnqueueDeassociateIpAddress(SetEnqueueDeassociateIpAddress $parameters)
+  {
+    return $this->__soapCall('SetEnqueueDeassociateIpAddress', array($parameters));
   }
 
   /**
@@ -665,6 +769,26 @@ class WsEndUser extends SoapClient
   public function SetRemoveServerScheduledOperation(SetRemoveServerScheduledOperation $parameters)
   {
     return $this->__soapCall('SetRemoveServerScheduledOperation', array($parameters));
+  }
+
+  /**
+   * 
+   * @param SetUpdatePersonalTemplate $parameters
+   * @access public
+   */
+  public function SetUpdatePersonalTemplate(SetUpdatePersonalTemplate $parameters)
+  {
+    return $this->__soapCall('SetUpdatePersonalTemplate', array($parameters));
+  }
+
+  /**
+   * 
+   * @param SetRemovePersonalTemplate $parameters
+   * @access public
+   */
+  public function SetRemovePersonalTemplate(SetRemovePersonalTemplate $parameters)
+  {
+    return $this->__soapCall('SetRemovePersonalTemplate', array($parameters));
   }
 
   /**
@@ -909,6 +1033,36 @@ class WsEndUser extends SoapClient
 
   /**
    * 
+   * @param GetTemplateDetails $parameters
+   * @access public
+   */
+  public function GetTemplateDetails(GetTemplateDetails $parameters)
+  {
+    return $this->__soapCall('GetTemplateDetails', array($parameters));
+  }
+
+  /**
+   * 
+   * @param GetTemplateCategories $parameters
+   * @access public
+   */
+  public function GetTemplateCategories(GetTemplateCategories $parameters)
+  {
+    return $this->__soapCall('GetTemplateCategories', array($parameters));
+  }
+
+  /**
+   * 
+   * @param GetAvailablePersonalTemplates $parameters
+   * @access public
+   */
+  public function GetAvailablePersonalTemplates(GetAvailablePersonalTemplates $parameters)
+  {
+    return $this->__soapCall('GetAvailablePersonalTemplates', array($parameters));
+  }
+
+  /**
+   * 
    * @param SetEnqueueServerCreation $parameters
    * @access public
    */
@@ -1069,52 +1223,22 @@ class WsEndUser extends SoapClient
 
   /**
    * 
+   * @param SetEnqueuePersonalTemplateCreation $parameters
+   * @access public
+   */
+  public function SetEnqueuePersonalTemplateCreation(SetEnqueuePersonalTemplateCreation $parameters)
+  {
+    return $this->__soapCall('SetEnqueuePersonalTemplateCreation', array($parameters));
+  }
+
+  /**
+   * 
    * @param SetChangeNoteServer $parameters
    * @access public
    */
   public function SetChangeNoteServer(SetChangeNoteServer $parameters)
   {
     return $this->__soapCall('SetChangeNoteServer', array($parameters));
-  }
-
-  /**
-   * 
-   * @param SetPurchaseIpAddress $parameters
-   * @access public
-   */
-  public function SetPurchaseIpAddress(SetPurchaseIpAddress $parameters)
-  {
-    return $this->__soapCall('SetPurchaseIpAddress', array($parameters));
-  }
-
-  /**
-   * 
-   * @param SetRemoveIpAddress $parameters
-   * @access public
-   */
-  public function SetRemoveIpAddress(SetRemoveIpAddress $parameters)
-  {
-    return $this->__soapCall('SetRemoveIpAddress', array($parameters));
-  }
-
-  /**
-   * 
-   * @param SetEnqueueAssociateIpAddress $parameters
-   * @access public
-   */
-  public function SetEnqueueAssociateIpAddress(SetEnqueueAssociateIpAddress $parameters)
-  {
-    return $this->__soapCall('SetEnqueueAssociateIpAddress', array($parameters));
-  }
-
-  /**
-   * 
-   * @param SetEnqueueDeassociateIpAddress $parameters
-   * @access public
-   */
-  public function SetEnqueueDeassociateIpAddress(SetEnqueueDeassociateIpAddress $parameters)
-  {
-    return $this->__soapCall('SetEnqueueDeassociateIpAddress', array($parameters));
   }
 
 }

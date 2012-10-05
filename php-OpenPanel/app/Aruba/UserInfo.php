@@ -36,6 +36,13 @@ class UserInfo
 
   /**
    * 
+   * @var boolean $IsCompanyRoot
+   * @access public
+   */
+  public $IsCompanyRoot;
+
+  /**
+   * 
    * @var array $Permission
    * @access public
    */
@@ -73,6 +80,7 @@ class UserInfo
    * 
    * @param int $CompanyID
    * @param string $CompanyName
+   * @param boolean $IsCompanyRoot
    * @param array $Permission
    * @param int $UserID
    * @param string $UserName
@@ -80,10 +88,11 @@ class UserInfo
    * @param UserStatus $UserStatus
    * @access public
    */
-  public function __construct($CompanyID, $CompanyName, $UserID, $UserName, $UserRole, $UserStatus, $Permission = null)
+  public function __construct($CompanyID, $CompanyName, $UserID, $UserName, $UserRole, $UserStatus, $Permission=null, $IsCompanyRoot=null)
   {
     $this->CompanyID = $CompanyID;
     $this->CompanyName = $CompanyName;
+    $this->IsCompanyRoot = $IsCompanyRoot;
     $this->Permission = $Permission;
     $this->UserID = $UserID;
     $this->UserName = $UserName;

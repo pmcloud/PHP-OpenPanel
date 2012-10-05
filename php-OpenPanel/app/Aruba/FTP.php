@@ -64,6 +64,13 @@ class FTP
 
   /**
    * 
+   * @var int $PersonalTemplateUsedSpace
+   * @access public
+   */
+  public $PersonalTemplateUsedSpace;
+
+  /**
+   * 
    * @var int $ProductID
    * @access public
    */
@@ -105,6 +112,7 @@ class FTP
    * @param FTPAccountStatus $FTPAccountStatus
    * @param FTPServer $FTPServer
    * @param string $Path
+   * @param int $PersonalTemplateUsedSpace
    * @param int $ProductID
    * @param int $Quantity
    * @param int $ResourceID
@@ -112,7 +120,7 @@ class FTP
    * @param int $UserID
    * @access public
    */
-  public function __construct($CreationDate, $DataCenterID, $FTPAccountID, $FTPAccountStatus, $FTPServer, $Path, $ProductID, $Quantity, $ResourceID, $UsedSpace, $UserID)
+  public function __construct($CreationDate, $DataCenterID, $FTPAccountID, $FTPAccountStatus, $FTPServer, $Path, $ProductID, $Quantity, $ResourceID, $UsedSpace, $UserID, $PersonalTemplateUsedSpace = null)
   {
     $this->CreationDate = $CreationDate;
     $this->DataCenterID = $DataCenterID;
@@ -120,6 +128,7 @@ class FTP
     $this->FTPAccountStatus = $FTPAccountStatus;
     $this->FTPServer = $FTPServer;
     $this->Path = $Path;
+    $this->PersonalTemplateUsedSpace = $PersonalTemplateUsedSpace;
     $this->ProductID = $ProductID;
     $this->Quantity = $Quantity;
     $this->ResourceID = $ResourceID;
